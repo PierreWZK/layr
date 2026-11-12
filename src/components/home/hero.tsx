@@ -38,7 +38,7 @@ export function Hero() {
       <GridField sx={sx} sy={sy} />
 
       <div className="relative mx-auto grid min-h-[calc(100svh-4rem)] max-w-[1440px] grid-rows-[auto_1fr] px-4 pb-16 pt-10 md:px-8 md:pb-20 md:pt-14 lg:grid-cols-12 lg:grid-rows-1 lg:gap-0">
-        <div className="flex flex-col justify-between gap-12 lg:col-span-7 lg:py-6">
+        <div className="flex flex-col justify-center gap-8 lg:col-span-7 lg:gap-9 lg:py-6">
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -49,7 +49,7 @@ export function Hero() {
             {t.hero.label}
           </motion.p>
 
-          <h1 aria-label={headlineLines.join(" ")} className="t-display mt-auto">
+          <h1 aria-label={headlineLines.join(" ")} className="t-display hero-title">
             {headlineLines.map((line, index) => (
               <span key={line} className="block overflow-hidden pb-[0.08em]">
                 <motion.span
@@ -64,12 +64,13 @@ export function Hero() {
             ))}
           </h1>
 
-          <div className="grid gap-8 md:grid-cols-[minmax(0,26rem)_auto] md:items-end md:justify-between">
+          {/* Texte puis CTA empilés : le texte garde sa largeur, les CTA restent dans l'écran */}
+          <div className="flex flex-col gap-7">
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="t-lead text-muted"
+              className="t-lead max-w-[34rem] text-muted"
             >
               {t.hero.body}
             </motion.p>

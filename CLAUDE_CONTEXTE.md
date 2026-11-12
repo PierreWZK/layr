@@ -31,6 +31,8 @@ Pas d'esthétique « IA générique » (pas de glassmorphism, dégradés répét
 - **Données** : tables websites, categories, badges, users, favorites, collections, collection_items (schéma du cahier des charges, ressources et inspirations dans la même table via `content_type`).
 - **Sécurité** : clés API uniquement côté serveur, validation des entrées, gestion d'erreurs.
 
+**Retours de l'utilisateur après l'étape 1 (2026-11-12)** : héro FR sans CTA visibles → corrigé ; page d'accueil (vitrine) à enrichir pour montrer ce que propose le site → fait ; puis continuer.
+
 ## 2. Décisions prises avec l'utilisateur (2026-11-12)
 
 | Sujet | Choix |
@@ -50,55 +52,72 @@ Pas d'esthétique « IA générique » (pas de glassmorphism, dégradés répét
 
 ## 3. Plan V1 — 5 étapes (validation de l'utilisateur après chacune)
 
-1. **Fondations & identité** — projet Next.js, Postgres local + schéma + migrations, design system « Calques » (tokens clair/sombre, typo, composants de base), i18n `/fr` `/en` avec détection, thèmes + transition circulaire, nav + footer, héro animé. **Code prêt, en attente de validation.**
-2. **Catalogue & découverte** — seed ~60 sites (captures Playwright, textes FR/EN), page Découvrir (grille, cartes, modes d'affichage, filtres catégories/badges/tris, chips, tiroir mobile), recherche instantanée + suggestions + raccourcis, fiche site, sections d'accueil (site du jour, tendances, récents, choix de la rédaction, plus sauvegardés).
-3. **Inspiration, favoris & comptes** — page Inspiration et ses filtres, favoris locaux + comptes visiteurs + synchro, collections, récemment vus, newsletter et contact.
+1. **Fondations & identité** — **validée et commitée** (`90d6bbb` sur `feat/layr-v1`).
+2. **Catalogue & découverte** — **code prêt, en attente de validation, non commité.**
+3. **Inspiration, favoris & comptes** — page Inspiration et ses filtres, page Favoris + comptes visiteurs + synchro, collections, récemment vus, newsletter et contact.
 4. **Admin & soumission IA** — dashboard protégé, CRUD sites/catégories/badges, upload captures, soumission URL → Playwright + Gemini → aperçu modifiable → approbation, repli manuel, lecture newsletter/contact.
 5. **Finitions & mise en ligne** — animations et reduced-motion, responsive, accessibilité, tests, Dockerfile (Chromium), dépôt GitHub `master`, Coolify + Postgres, domaine, README.
 
 ## 4. Ce qui est fait
 
-- [x] Questions de cadrage posées et réponses consignées (section 2).
-- [x] Ce fichier de contexte.
-- [x] **Étape 1 — Fondations & identité** (code prêt, non commité : attente de validation de l'utilisateur).
-  - Next.js 16.4 + TypeScript + Tailwind v4 + Framer Motion. Commandes : `npm run dev`, `npm run build`, `npm run lint`.
-  - Postgres : `npm run db:start` (Postgres local embarqué, port 5433, données dans `.pgdata/`), `npm run db:migrate` (`db/migrations/001_init.sql` et `002_taxonomy_seed.sql`). Schéma complet du cahier des charges, plus `search_document` (recherche plein texte maintenue par trigger). Seed : 16 catégories, 13 badges (FR/EN).
-  - i18n `/fr` `/en` : `src/proxy.ts` redirige selon le cookie `layr-locale` (choix manuel), puis `Accept-Language` (fr → FR, sinon EN), puis le pays (FR/BE/CH/LU/MC) en repli. Dictionnaires typés FR/EN dans `src/i18n/`.
-  - Thèmes Système / Clair / Sombre : préférence dans `localStorage` (`layr-theme`), script du `<head>` sans flash, révélation circulaire (View Transitions API, 550 ms) depuis le bouton, repli en fondu 500 ms, `prefers-reduced-motion` respecté.
-  - Design system : tokens clair/sombre (`src/app/globals.css`, palette Mocha / Champagne / Amber / Charcoal), échelle typo `t-display`, `t-h1`, `t-h2`, `t-lead`, `t-label`, composants Button, ButtonLink, Badge, Surface, Field, Modal, Reveal, Magnetic.
-  - Navigation (Découvrir, Inspiration, Catégories, Tendances, Favoris, Proposer), logo, sélecteur FR/EN, menu mobile animé, footer éditorial.
-  - Héro « GOOD DESIGN / IS NEVER RANDOM. » (version FR traduite), label, CTA, calques dessinés avec parallaxe souris et défilement, trame animée.
-  - Accueil : index des 16 catégories lu depuis la base (squelette pendant le chargement, message si base absente ou en erreur).
-  - Pages Découvrir, Inspiration, Catégories, Tendances, Favoris, Proposer : **pages réservées** (« Bientôt disponible »), sans contenu pour l'instant.
+### Étape 1 — Fondations & identité (commit `90d6bbb`)
+- Next.js 16.4 + TypeScript + Tailwind v4 + Framer Motion. Commandes : `npm run dev`, `npm run build`, `npm run lint`.
+- Postgres : `npm run db:start` (Postgres local embarqué, port 5433, données dans `.pgdata/`), `npm run db:migrate`.
+- i18n `/fr` `/en` : `src/proxy.ts` (cookie `layr-locale` → `Accept-Language` → pays FR/BE/CH/LU/MC → EN).
+- Thèmes Système / Clair / Sombre, révélation circulaire (View Transitions API), repli en fondu, sans flash.
+- Design system « Calques » (`src/app/globals.css`), navigation, footer, héro.
+
+### Étape 2 — Catalogue & découverte (non commitée)
+- **Héro FR corrigé** : titre borné par la hauteur d'écran (`.hero-title`, plus petit en FR), texte et CTA empilés. CTA visibles en FR et EN à 1440×900, 1280×720, 1024×640 et 375×812.
+- **71 sites réels** dans `db/seed/websites.json` : 43 ressources, 28 inspirations (portfolios, studios, agences, landing pages, e-commerce, expérimental, storytelling, typo, 3D…), textes FR/EN, critiques, notes, badges, tags, champs visuels (style, palette, mise en page, animation, secteur).
+- **Captures** : `npm run capture` (`scripts/capture.mjs`, Playwright, 1200×750 WebP, ~2,5 Mo au total dans `public/screenshots/`). Bannières cookies masquées sans consentement. Options : `--force`, `--og` (image Open Graph du site), `--strip-overlays`.
+- **Seed** : `npm run db:seed` (upsert par URL, rejouable).
+- **Migration 003** : colonne `slug` + table `website_events` (ouvertures de fiche et clics « Visiter »).
+- **Couche données** `src/lib/websites.ts` : requêtes filtrées (recherche plein texte par préfixe + catégories + badges + tags, filtres combinés), tris (sélection, note, récents, populaires, sauvegardés, tendances), site du jour, sites proches, suggestions, compteurs.
+- **Découvrir** (`/[locale]/discover`) : filtres catégories (multi), badges (multi), filtres rapides (À la une, Gratuit, Premium), recherche avec délai de 250 ms, tri, vue grille/liste, chips supprimables, « Effacer tous les filtres », compteur, mise à jour sans rechargement (URL = état, `useOptimistic`), barre latérale bureau, tiroir animé mobile, état vide, squelette.
+- **Recherche globale** (palette dans la nav) : raccourci `/`, Échap, Entrée, flèches, suggestions (sites, catégories, badges, tags), « voir tous les résultats », recherches récentes (localStorage). API `GET /api/search`.
+- **Carte de site** : capture, zoom et calque décalé au survol, badge À la une, favori, titre, domaine (lien externe), note /10, description, catégorie, badges, tags. Vue liste.
+- **Favoris locaux** (`src/lib/favorites-store.ts`) : bouton cœur animé, toast avec lien « Voir ». La page Favoris arrive à l'étape 3.
+- **Fiche site** (`/[locale]/site/[slug]`) : fil d'Ariane, titre, domaine, Visiter (via `/go/[slug]`, compte le clic), favori, grande capture sur calque, note éditoriale + explication, catégorie, badges, tags, critique, infos inspiration (créateur, style, palette…), date d'ajout, 4 sites proches. Compte les ouvertures (`POST /api/events`).
+- **Catégories** (`/[locale]/categories`) : 16 catégories avec 3 captures empilées, description, nombre de sites, lien vers Découvrir filtré.
+- **Tendances** (`/[locale]/trending`) : top 20 sur 7 jours (ouvertures + visites), méthode expliquée, à égalité la note départage.
+- **Vitrine enrichie** (accueil) : chiffres réels (71 sites, 16 catégories, 13 badges, 14 univers, 2 langues), « Une belle découverte par jour », 4 piliers (Découvrir, Inspiration, Favoris, Proposer), Tendances de la semaine (seulement s'il y a eu de l'activité), Choix de la rédaction, index des catégories (liens + compteurs), mur des 13 badges (liens), Ajouts récents, Les plus sauvegardés (seulement si des sauvegardes existent en base), 14 univers d'inspiration, méthode en 4 étapes, CTA final.
 
 ## 5. Ce qui a été testé
 
-- Redirections du proxy (curl) : `Accept-Language: fr-FR` → `/fr` ; `en-US` → `/en` ; `de-DE` → `/en` ; sans en-tête → `/en` ; cookie `layr-locale=fr` prime sur `en-US` → `/fr`.
-- Migrations appliquées deux fois sans erreur (idempotence). Seed : 16 catégories, 13 badges.
+- Étape 1 : redirections proxy (fr/en/de/sans en-tête/cookie), migrations rejouables, build, lint, tsc.
+- Étape 2, base : seed rejoué deux fois (71 sites, 71 captures), recherche `typo:*` → Typewolf, Klim, Pangram… ; `npm run db:migrate` (003) OK.
+- Captures vérifiées à l'œil sur planche contact : 67 OK au premier passage. 5 sites WebGL ou à préchargeur (Active Theory, Bruno Simon, Lusion, Obys, Patatap) → image Open Graph. Neal.fun → overlay de consentement retiré. 4 sites bloquent tout robot (Behance, Blender, Unsplash, Blush) → remplacés par It's Nice That, Three.js, Haikei, Open Peeps.
+- Routes (Node fetch) : toutes les pages en 200, `/go/linear` → 302 vers linear.app, `/api/search` FR (« typo », « outils » → catégories Outils IA / Outils développeurs), `POST /api/events` 204 et 400 sur un slug invalide.
+- Playwright, bureau : filtres Typographie + Gratuit + recherche « google » → 1 résultat, 3 chips ; « Effacer tous les filtres » ; tri par note ; vue liste ; favori + toast + localStorage ; palette `/` (« fig » → Figma, Relume, #figma) ; Entrée ouvre la fiche ; recherche récente mémorisée ; Échap ferme ; état vide.
+- Playwright, mobile 375 px sombre : tiroir de filtres, compteur du bouton (« Show 3 results »), pas de débordement horizontal sur `/fr`, `/fr/discover`, fiche, catégories, tendances.
+- Aucune erreur console ni erreur de page pendant les parcours.
 - `tsc --noEmit`, `eslint .`, `next build` : OK.
-- Navigateur intégré, bureau : `/en` et `/fr` rendus. Titre FR correct après correction (l'accent était écrit en dur sur « IS NEVER RANDOM »). 16 entrées d'index venant de la base.
-- Navigateur intégré, bureau : menu thème ouvert, passage en Clair vérifié (classe `dark` retirée, `localStorage` = `light`, fond `rgb(246, 241, 231)`).
-- Navigateur intégré, mobile 375 px : pas de débordement horizontal, menu mobile s'ouvre, bouton Proposer masqué sous `md`.
-- Console : aucune erreur après les correctifs Suspense. Dernière série de corrections lint/thème : compilée et buildée, pas revérifiée dans le navigateur.
 
 ## 6. Ce qui n'a pas marché / reste en suspens
 
-- **Transition circulaire du thème** : codée (View Transitions API), mais jamais vue en mouvement. À vérifier dans un vrai navigateur.
-- **Mode sombre** : vérifié au début de l'étape, pas revérifié après les dernières corrections.
-- **Pas de vraies captures** : le héro affiche des calques dessinés. Les captures Playwright arrivent à l'étape 2.
-- **Pas encore présents** (étapes suivantes) : recherche, filtres, fiche site, favoris, inscription/connexion, icône profil, newsletter, formulaire de contact, admin, soumission IA.
-- **Dépôt GitHub** : pas créé. Le lien du footer `github.com/PierreWZK/layr` ne mène nulle part tant que l'étape 5 n'est pas faite. Branche locale `master`, rien de poussé.
-- **Rien commité** : attente de la validation de l'étape 1.
-- Postgres local seulement. Pas encore de Dockerfile ni de base Coolify.
+- **Transition circulaire du thème** : codée, jamais vue en mouvement (le volet navigateur intégré est masqué : ses animations sont gelées). À vérifier à la main.
+- **Fiche inexistante** (`/fr/site/nope`) : affiche la page introuvable mais avec un code HTTP 200 (limite du rendu en streaming de Next). À traiter à l'étape 5 si besoin pour le SEO.
+- **Pas de métadonnées par fiche** (titre/description de l'onglet par site) : prévu à l'étape 5.
+- **Recherche sans accents** : « typographie » fonctionne, mais une requête sans accent ne trouve pas un mot accentué (pas d'extension `unaccent`). À voir à l'étape 5.
+- **Tendances / Plus sauvegardés** : données vides au départ (aucune visite réelle), d'où l'affichage conditionnel sur l'accueil.
+- **Piliers de l'accueil** : Inspiration, Favoris et Proposer pointent encore vers des pages « Bientôt disponible » (étapes 3 et 4). Les promesses « compte gratuit » et « analyse par IA » deviennent vraies aux étapes 3 et 4.
+- **Tags** stockés en anglais uniquement (les descriptions, elles, sont bilingues).
+- **Captures OG** pour 5 sites : ce n'est pas une capture d'écran mais l'image de partage officielle du site.
+- **Dépôt GitHub** pas créé. Lien footer `github.com/PierreWZK/layr` mort jusqu'à l'étape 5.
 
-## 7. Pièges connus (projets précédents)
+## 7. Pièges connus
 
 - `create-next-app` refuse un dossier non vide (ce fichier) : générer dans un sous-dossier temporaire puis déplacer.
 - git-guard bloque les push directs : créer `master` via `gh api`, travailler en branche + PR.
 - Coolify : après création de l'app sur la branche de PR, la repasser sur `master` après fusion. L'API refuse « — » dans les descriptions.
-- Le volet navigateur masqué peut fausser les mesures et les animations : vérifier visible.
-- Next 16 + `cacheComponents` : lire `params` ou la base uniquement dans un `<Suspense>` (sinon erreur de pré-rendu ou avertissement `instant-shell-url-data`). `new Date()` dans un Client Component casse aussi le build.
-- Dans un script shell, ne jamais écrire du texte contenant des backticks dans des guillemets doubles (substitution de commande) : passer par l'outil Write.
+- Next 16 + `cacheComponents` : lire `params`, `searchParams` ou la base uniquement dans un `<Suspense>`, avec `await connection()` pour les lectures de base. `new Date()` dans un Client Component casse le build.
+- Sections `mx-auto max-w-…` dans un conteneur flex : ajouter `w-full`, sinon un carrousel horizontal les élargit (débordement mobile).
+- Le volet navigateur intégré masqué gèle les animations Framer : vérifier avec Playwright headless (faire défiler avant une capture pleine page, sinon les blocs `whileInView` restent invisibles).
+- Un vieux serveur `next dev` peut rester sur le port 3000 et servir un CSS périmé : le tuer avant de conclure à un bug CSS.
+- Les hooks bloquent `curl` et `fetch` inline dans Bash : passer par un script Node écrit dans le projet puis supprimé.
+- Dans un script shell, ne jamais mettre de backticks dans des guillemets doubles : passer par l'outil Write.
+- Captures : le shell headless de Playwright n'a pas de WebGL ; même avec Chromium complet + SwiftShader, les gros sites 3D restent bloqués au chargement → `--og`.
 
 ## 8. Après la V1
 

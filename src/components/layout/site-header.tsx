@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { LanguageSwitcher } from "@/components/i18n/language-switcher";
 import { useI18n } from "@/components/i18n/locale-provider";
+import { SearchCommand } from "@/components/search/search-command";
 import { ThemeToggle } from "@/components/theme/theme-toggle";
 import { ButtonLink } from "@/components/ui/button";
 import { LogoMark } from "./logo";
@@ -60,6 +61,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <SearchCommand />
           <div className="hidden sm:block"><LanguageSwitcher /></div>
           <ThemeToggle />
           <div className="hidden md:block">

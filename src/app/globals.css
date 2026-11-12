@@ -105,6 +105,14 @@
     font-size: clamp(1.0625rem, 1.5vw, 1.25rem);
     line-height: 1.55;
   }
+  /* Titre du héro : borné par la hauteur d'écran pour garder les CTA visibles.
+     Le français est plus long (4 mots sur la 2e ligne) : taille réduite. */
+  .hero-title {
+    font-size: clamp(2.75rem, min(8.4vw, 12vh), 10.5rem);
+  }
+  .hero-title:lang(fr) {
+    font-size: clamp(2.5rem, min(6.6vw, 9.2vh), 8.5rem);
+  }
   .t-label {
     font-family: var(--font-mono);
     font-size: 11px;
