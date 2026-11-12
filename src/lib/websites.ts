@@ -2,6 +2,7 @@ import { cache } from "react";
 import type { Locale } from "@/i18n/config";
 import { getPool } from "./db";
 import type { DiscoverFilters, SortKey } from "./discover-params";
+import type { InspirationKey } from "./inspiration-params";
 
 export type BadgeInfo = { slug: string; name: string; color: string; description: string; count: number };
 export type CategoryInfo = {
@@ -206,9 +207,20 @@ async function toWebsites(locale: Locale, rows: Row[]): Promise<Website[]> {
   }));
 }
 
+// Colonnes autorisées pour les filtres d'inspiration (jamais de nom de colonne venu de l'URL)
+const INSPIRATION_COLUMNS: Record<InspirationKey, string> = {
+  category: "w.inspiration_category",
+  style: "w.visual_style",
+  palette: "w.color_palette",
+  layout: "w.layout_type",
+  animation: "w.animation_type",
+  industry: "w.industry",
+};
+
 type QueryOptions = Partial<Pick<DiscoverFilters, "q" | "categories" | "badges" | "featured" | "free" | "premium">> & {
   sort?: InternalSort;
   type?: "resource" | "inspiration";
+  inspiration?: Partial<Record<InspirationKey, string[]>>;
   minRating?: number;
   savedOnly?: boolean;
   excludeId?: string;
@@ -243,6 +255,10 @@ export async function queryWebsites(locale: Locale, options: QueryOptions = {}):
   if (options.free) where.push(`'free' = any(w.badges)`);
   if (options.premium) where.push(`'premium' = any(w.badges)`);
   if (options.type) where.push(`w.content_type = ${param(options.type)}`);
+  for (const key of Object.keys(INSPIRATION_COLUMNS) as InspirationKey[]) {
+    const values = options.inspiration?.[key];
+    if (values?.length) where.push(`${INSPIRATION_COLUMNS[key]} = any(${param(values)})`);
+  }
   if (options.minRating) where.push(`w.rating >= ${param(options.minRating)}`);
   if (options.savedOnly) where.push("coalesce(s.saves, 0) > 0");
   if (options.excludeId) where.push(`w.id <> ${param(options.excludeId)}`);
@@ -253,6 +269,17 @@ export async function queryWebsites(locale: Locale, options: QueryOptions = {}):
 
   const { rows } = await pool.query<Row>(sql, values);
   return toWebsites(locale, rows);
+}
+
+// Fiches pour une liste de slugs, dans l'ordre demandé. null = base non configurée.
+export async function getWebsitesBySlugs(locale: Locale, slugs: string[]): Promise<Website[] | null> {
+  const pool = getPool();
+  if (!pool) return null;
+  if (!slugs.length) return [];
+  const { rows } = await pool.query<Row>(`${SELECT} and w.slug = any($1)`, [slugs]);
+  const sites = await toWebsites(locale, rows);
+  const order = new Map(slugs.map((slug, index) => [slug, index]));
+  return sites.sort((a, b) => (order.get(a.slug) ?? 0) - (order.get(b.slug) ?? 0));
 }
 
 export async function getWebsiteBySlug(locale: Locale, slug: string): Promise<Website | null> {

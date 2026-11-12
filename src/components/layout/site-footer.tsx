@@ -4,6 +4,7 @@ import Link from "next/link";
 import { LanguageSwitcher } from "@/components/i18n/language-switcher";
 import { useI18n } from "@/components/i18n/locale-provider";
 import { Reveal } from "@/components/motion/reveal";
+import { NewsletterForm } from "@/components/newsletter/newsletter-form";
 import { LogoMark } from "./logo";
 
 export function SiteFooter() {
@@ -66,6 +67,20 @@ export function SiteFooter() {
                 </a>
               </li>
             </ul>
+          </div>
+        </div>
+
+        <div className="mt-20 grid gap-12 border-t border-line pt-12 md:grid-cols-12">
+          <div className="md:col-span-7">
+            <p className="t-label mb-5 text-muted">{t.newsletter.label}</p>
+            <NewsletterForm />
+          </div>
+          <div className="md:col-span-5">
+            <p className="t-label mb-5 text-muted">{t.contact.label}</p>
+            <p className="text-[15px] text-muted">{t.contact.intro}</p>
+            <Link href={`/${locale}/contact`} className="mt-6 inline-flex items-center text-[15px] font-medium text-accent underline underline-offset-4">
+              {t.contact.title} →
+            </Link>
           </div>
         </div>
 

@@ -135,7 +135,7 @@ async function SiteDetail({ params }: PageProps) {
             <div>
               <p className="t-label mb-3 text-muted">{t.site.tags}</p>
               <div className="flex flex-wrap gap-x-3 gap-y-1 text-[14px]">
-                {[...site.tags, ...site.visualTags].map((tag) => (
+                {[...new Set([...site.tags, ...site.visualTags])].map((tag) => (
                   <Link key={tag} href={`/${locale}/discover?q=${encodeURIComponent(tag)}`} className="text-muted hover:text-accent">
                     #{tag}
                   </Link>
@@ -160,8 +160,8 @@ async function SiteDetail({ params }: PageProps) {
           <dl className="mt-14 grid grid-cols-2 gap-x-8 gap-y-6 border-t border-line pt-10 sm:grid-cols-3">
             {facts
               .filter((fact): fact is [string, string] => Boolean(fact[1]))
-              .map(([label, value]) => (
-                <div key={label}>
+              .map(([label, value], index) => (
+                <div key={`${index}-${label}`}>
                   <dt className="t-label text-muted">{label}</dt>
                   <dd className="mt-2 text-[15px]">{value}</dd>
                 </div>

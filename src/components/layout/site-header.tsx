@@ -64,6 +64,18 @@ export function SiteHeader() {
           <SearchCommand />
           <div className="hidden sm:block"><LanguageSwitcher /></div>
           <ThemeToggle />
+          <Link
+            href={hrefOf("account")}
+            aria-label={t.account.label}
+            title={t.account.label}
+            aria-current={isActive("account") ? "page" : undefined}
+            className="grid h-9 w-9 place-items-center border border-line transition-colors duration-300 hover:border-accent hover:text-accent"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden>
+              <circle cx="12" cy="8.5" r="3.8" />
+              <path d="M4.5 20.5c1.4-3.6 4.1-5.4 7.5-5.4s6.1 1.8 7.5 5.4" strokeLinecap="round" />
+            </svg>
+          </Link>
           <div className="hidden md:block">
             <ButtonLink href={hrefOf("submit")} size="sm">
               {t.nav.submit}

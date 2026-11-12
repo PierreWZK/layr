@@ -53,8 +53,8 @@ Pas d'esthétique « IA générique » (pas de glassmorphism, dégradés répét
 ## 3. Plan V1 — 5 étapes (validation de l'utilisateur après chacune)
 
 1. **Fondations & identité** — **validée et commitée** (`90d6bbb` sur `feat/layr-v1`).
-2. **Catalogue & découverte** — **code prêt, en attente de validation, non commité.**
-3. **Inspiration, favoris & comptes** — page Inspiration et ses filtres, page Favoris + comptes visiteurs + synchro, collections, récemment vus, newsletter et contact.
+2. **Catalogue & découverte** — **validée et commitée** (`087f061`).
+3. **Inspiration, favoris & comptes** — **code prêt et testé, en attente de validation, non commité** (voir section 4).
 4. **Admin & soumission IA** — dashboard protégé, CRUD sites/catégories/badges, upload captures, soumission URL → Playwright + Gemini → aperçu modifiable → approbation, repli manuel, lecture newsletter/contact.
 5. **Finitions & mise en ligne** — animations et reduced-motion, responsive, accessibilité, tests, Dockerfile (Chromium), dépôt GitHub `master`, Coolify + Postgres, domaine, README.
 
@@ -83,7 +83,28 @@ Pas d'esthétique « IA générique » (pas de glassmorphism, dégradés répét
 - **Tendances** (`/[locale]/trending`) : top 20 sur 7 jours (ouvertures + visites), méthode expliquée, à égalité la note départage.
 - **Vitrine enrichie** (accueil) : chiffres réels (71 sites, 16 catégories, 13 badges, 14 univers, 2 langues), « Une belle découverte par jour », 4 piliers (Découvrir, Inspiration, Favoris, Proposer), Tendances de la semaine (seulement s'il y a eu de l'activité), Choix de la rédaction, index des catégories (liens + compteurs), mur des 13 badges (liens), Ajouts récents, Les plus sauvegardés (seulement si des sauvegardes existent en base), 14 univers d'inspiration, méthode en 4 étapes, CTA final.
 
+### Étape 3 — Inspiration, favoris & comptes (non commitée)
+- **Migration 004** (`db/migrations/004_accounts.sql`) : `users.display_name`, table `sessions` (jeton haché SHA-256, expiration 30 jours), `newsletter_subscribers`, `contact_messages`.
+- **Comptes maison** (`src/lib/auth.ts`) : mot de passe en scrypt (sel 16 octets), jeton aléatoire de 32 octets dans le cookie `layr-session` (httpOnly, sameSite lax, secure en production). Routes `POST /api/auth/register`, `/api/auth/login`, `/api/auth/logout`, `GET /api/me`.
+- **Page Compte** `/[locale]/account` : connexion / inscription (onglets), bienvenue, date d'adhésion, déconnexion. Icône dans l'en-tête.
+- **Synchro des favoris** : le localStorage reste la liste affichée. Connecté : chaque ajout/retrait part aussi vers `POST /api/favorites`, et à la connexion les favoris locaux sont fusionnés par `POST /api/favorites/sync` (rien n'est retiré, la liste serveur est adoptée). `AccountProvider` (`src/components/account/account-provider.tsx`) porte l'état de session.
+- **Page Favoris** `/[locale]/favorites` : recherche texte, filtre catégorie, tri (récents, mieux notés, A à Z), compteur, fiches via `GET /api/websites?locale=&slugs=` (`getWebsitesBySlugs`). Bandeau « sur cet appareil uniquement » ou « synchronisé ».
+- **Collections** (connecté seulement) : créer, ouvrir, ajouter un favori, retirer, supprimer. Routes `/api/collections`, `/api/collections/[id]`, `/api/collections/[id]/items`. Les tables existaient depuis `001_init.sql`.
+- **Récemment consultés** : `src/lib/recent-store.ts` (localStorage `layr-recent`, 12 entrées max), alimenté par `ViewBeacon` sur chaque fiche. Affiché en bas de la page Favoris.
+- **Page Inspiration** `/[locale]/inspiration` : 14 catégories en multi-sélection, filtres style visuel, palette, mise en page, mouvement, secteur (libellés FR/EN dans `src/i18n/inspiration-labels.ts`), note minimale (0, 7, 8, 9), tri. État dans l'URL (valeurs séparées par des virgules). Les colonnes filtrées viennent d'une liste blanche (`INSPIRATION_COLUMNS` dans `websites.ts`).
+- **Newsletter** : formulaire dans le pied de page, `POST /api/newsletter`, stockage seul (pas d'envoi en V1).
+- **Contact** `/[locale]/contact` : nom, e-mail, message (10 à 3000 caractères), `POST /api/contact`, stockage seul (lecture dans l'admin à l'étape 4).
+- Pages `favorites`, `inspiration`, `account`, `contact` remplacent les pages « Bientôt disponible ».
+- Libellés `inspirationPage`, `favoritesPage`, `account`, `contact`, `newsletter` ajoutés aux deux dictionnaires.
+
 ## 5. Ce qui a été testé
+
+- Étape 3, API (38 vérifications, toutes OK) : inscription (mot de passe court, e-mail invalide, doublon 409), connexion (mauvais mot de passe 401), `/api/me`, ajout/retrait de favori, fusion par sync (slug invalide ignoré, pas de doublon), collections (site ajouté une seule fois, retrait, suppression, collection d'un autre compte ou inconnue sans effet), batch de fiches dans l'ordre demandé, déconnexion, favoris sans session (401), newsletter et contact (validation et doublon), 12 pages en 200 (filtres invalides compris).
+- Étape 3, navigateur Playwright (17 vérifications, toutes OK) : filtre d'inspiration qui change l'URL et le nombre de fiches (28 → 5), effacer tout, filtre palette par URL, inscription avec bienvenue, favori visible sur la page Favoris et synchronisé côté serveur, création de collection, récemment consultés, contact envoyé, newsletter enregistrée, déconnexion, pas de débordement à 375 px sur les 4 nouvelles pages, aucune erreur console.
+- Étape 3, build : `tsc --noEmit`, `eslint .`, `next build` OK (nouvelles routes API en `ƒ`).
+- Bugs trouvés et corrigés pendant les tests : `event.currentTarget` lu après `await` (formulaires contact et newsletter affichaient une erreur alors que l'envoi réussissait) ; tags en double (« dark » présent dans tags et visualTags) ; clé React dupliquée sur les infos de fiche.
+
+## 6. Ce qui n'a pas marché / reste en suspens
 
 - Étape 1 : redirections proxy (fr/en/de/sans en-tête/cookie), migrations rejouables, build, lint, tsc.
 - Étape 2, base : seed rejoué deux fois (71 sites, 71 captures), recherche `typo:*` → Typewolf, Klim, Pangram… ; `npm run db:migrate` (003) OK.
@@ -106,6 +127,16 @@ Pas d'esthétique « IA générique » (pas de glassmorphism, dégradés répét
 - **Captures OG** pour 5 sites : ce n'est pas une capture d'écran mais l'image de partage officielle du site.
 - **Dépôt GitHub** pas créé. Lien footer `github.com/PierreWZK/layr` mort jusqu'à l'étape 5.
 
+- **Étape 3, reste à faire ou à savoir** :
+  - pas de limitation de débit sur les routes de connexion, d'inscription, de contact ou de newsletter (à traiter à l'étape 5) ;
+  - l'inscription renvoie `email_taken` : un visiteur peut donc savoir si une adresse a déjà un compte (compromis volontaire pour un message clair) ;
+  - pas de mot de passe oublié, pas de vérification d'e-mail, pas de modification du profil ni de suppression de compte (hors V1 ou étape 5) ;
+  - la liste de favoris affichée sur un appareil non connecté ne suit pas l'utilisateur : elle reste locale jusqu'à la connexion ;
+  - les facettes d'inspiration (style, palette…) gardent les valeurs anglaises de la base comme identifiants ; les libellés FR/EN sont dans `inspiration-labels.ts` ;
+  - les collections ne peuvent contenir que des favoris (ajout depuis la liste des favoris) ;
+  - l'animation de transition entre favoris non connectés et connectés n'est pas vérifiée à la main ;
+  - messages de contact et inscriptions à la newsletter stockés, mais aucun écran pour les lire (admin, étape 4).
+
 ## 7. Pièges connus
 
 - `create-next-app` refuse un dossier non vide (ce fichier) : générer dans un sous-dossier temporaire puis déplacer.
@@ -118,6 +149,12 @@ Pas d'esthétique « IA générique » (pas de glassmorphism, dégradés répét
 - Les hooks bloquent `curl` et `fetch` inline dans Bash : passer par un script Node écrit dans le projet puis supprimé.
 - Dans un script shell, ne jamais mettre de backticks dans des guillemets doubles : passer par l'outil Write.
 - Captures : le shell headless de Playwright n'a pas de WebGL ; même avec Chromium complet + SwiftShader, les gros sites 3D restent bloqués au chargement → `--og`.
+
+- Dans un Client Component, lire `event.currentTarget` après un `await` renvoie `null` : garder l'élément dans une variable avant l'appel réseau.
+- Un `button[aria-pressed]` ne désigne pas forcément un favori : les puces de filtre utilisent aussi `aria-pressed`. Pour les tests, cibler `article button[aria-pressed]`.
+- Les tags d'une fiche et ses tags visuels peuvent se répéter (« dark ») : toujours dédoublonner avant d'afficher.
+- Les routes qui lisent les cookies (`currentUser`, `sessionToken`) ne doivent pas être appelées depuis le layout : les comptes passent par `GET /api/me` depuis le navigateur.
+- Le cookie de session est posé dans une route handler (`setSessionCookie`), jamais dans un Server Component.
 
 ## 8. Après la V1
 

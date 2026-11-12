@@ -60,5 +60,31 @@ export function toggleFavorite(slug: string): boolean {
   const list = read();
   const saved = list.some((entry) => entry.slug === slug);
   write(saved ? list.filter((entry) => entry.slug !== slug) : [{ slug, savedAt: new Date().toISOString() }, ...list]);
+  if (remote) {
+    // Compte connecté : on envoie le changement au serveur (la liste locale reste la référence de l'affichage)
+    fetch("/api/favorites", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ slug, saved: !saved }),
+    }).catch(() => {});
+  }
   return !saved;
+}
+
+// Vrai quand un compte est connecté : chaque changement part aussi vers le serveur
+let remote = false;
+export function setRemoteFavorites(on: boolean) {
+  remote = on;
+}
+
+// Fusionne les favoris locaux dans le compte puis adopte la liste du serveur
+export async function syncFavorites(): Promise<void> {
+  const res = await fetch("/api/favorites/sync", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ entries: read() }),
+  });
+  if (!res.ok) return;
+  const data = (await res.json()) as { entries?: FavoriteEntry[] };
+  if (Array.isArray(data.entries)) write(data.entries);
 }
