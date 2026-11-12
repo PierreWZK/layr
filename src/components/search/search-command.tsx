@@ -175,13 +175,13 @@ export function SearchCommand() {
         onClick={openPalette}
         aria-label={t.search.open}
         aria-keyshortcuts="/"
-        className="group flex h-9 items-center gap-3 border border-line px-2.5 text-[13px] text-muted transition-colors hover:border-line-strong hover:text-fg xl:w-56 xl:justify-between"
+        className="group flex h-9 items-center gap-3 rounded-full border border-line px-3 text-[13px] text-muted transition-colors hover:border-line-strong hover:text-fg xl:w-56 xl:justify-between"
       >
         <span className="flex items-center gap-2">
           <SearchIcon />
           <span className="hidden xl:inline">{t.search.label}…</span>
         </span>
-        <kbd className="hidden border border-line px-1.5 font-mono text-[11px] xl:inline">/</kbd>
+        <kbd className="hidden rounded border border-line px-1.5 font-mono text-[11px] xl:inline">/</kbd>
       </button>
 
       <AnimatePresence>

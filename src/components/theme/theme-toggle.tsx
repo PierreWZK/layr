@@ -51,7 +51,7 @@ export function ThemeToggle() {
         aria-haspopup="menu"
         aria-expanded={open}
         aria-label={`${t.actions.theme}${mounted ? `: ${labels[pref]}` : ""}`}
-        className="grid h-9 w-9 place-items-center border border-line text-fg transition-colors duration-300 hover:border-line-strong hover:text-accent"
+        className="grid h-9 w-9 place-items-center rounded-full border border-line text-fg transition-colors duration-300 hover:border-line-strong hover:text-accent"
       >
         <ThemeIcon pref={mounted ? pref : "system"} resolved={mounted ? resolved : "light"} />
       </button>
@@ -64,7 +64,7 @@ export function ThemeToggle() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -4, scale: 0.98 }}
             transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute right-0 top-11 z-50 w-44 origin-top-right border border-line-strong bg-surface p-1"
+            className="absolute right-0 top-11 z-50 w-44 origin-top-right overflow-hidden rounded-2xl border border-line-strong bg-surface p-1"
           >
             {options.map((option) => (
               <li key={option} role="none">
@@ -84,7 +84,7 @@ export function ThemeToggle() {
                     );
                     setOpen(false);
                   }}
-                  className="flex w-full items-center justify-between px-3 py-2 text-left text-sm text-fg transition-colors hover:bg-surface-2"
+                  className="flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-sm text-fg transition-colors hover:bg-surface-2"
                 >
                   {labels[option]}
                   {pref === option && <span aria-hidden className="h-1.5 w-1.5 bg-accent" />}

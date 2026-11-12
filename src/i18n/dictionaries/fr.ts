@@ -14,6 +14,7 @@ export const fr: Dictionary = {
     favorites: 'Favoris',
     submit: 'Proposer un site',
     search: 'Rechercher',
+    tagline: 'Index du design',
   },
   actions: {
     explore: 'Explorer la collection ↗',
@@ -42,6 +43,7 @@ export const fr: Dictionary = {
     line2: 'N\'EST JAMAIS UN HASARD.',
     body: 'Découvrez des sites exceptionnels, des ressources créatives et des expériences digitales sélectionnées pour les esprits curieux.',
     layer: 'Calque',
+    scroll: 'Défiler',
     sheet: 'Aperçu',
   },
   search: {

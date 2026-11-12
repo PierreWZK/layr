@@ -22,7 +22,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
     <div
       role="group"
       aria-label={t.actions.language}
-      className={`inline-flex h-9 items-stretch border border-line text-[12px] font-medium ${className ?? ""}`}
+      className={`inline-flex h-9 items-stretch overflow-hidden rounded-full border border-line text-[12px] font-medium ${className ?? ""}`}
     >
       {locales.map((target) => {
         const active = target === locale;

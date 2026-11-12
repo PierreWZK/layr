@@ -12,6 +12,7 @@ export const en = {
     favorites: 'Favorites',
     submit: 'Submit a website',
     search: 'Search',
+    tagline: 'Design index',
   },
   actions: {
     explore: 'Explore the collection ↗',
@@ -40,6 +41,7 @@ export const en = {
     line2: 'IS NEVER RANDOM.',
     body: 'Discover exceptional websites, creative resources and digital experiences curated for curious minds.',
     layer: 'Layer',
+    scroll: 'Scroll',
     sheet: 'Preview',
   },
   search: {
