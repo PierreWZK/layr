@@ -178,6 +178,15 @@ Pas d'esthétique « IA générique » (pas de glassmorphism, dégradés répét
 - `readFile(path.join(MEDIA_DIR, …))` déclenche un avertissement de traçage Turbopack : ajouter `/*turbopackIgnore: true*/`.
 - La base Postgres embarquée (port 5433) peut s'arrêter : le serveur de dev se fige sans erreur claire. Relancer `npm run db:start`.
 
+## Étape 5 — Déploiement Coolify (fait le 2026-11-12)
+
+- Commit `e600882` (Dockerfile Debian + Chromium Playwright, `.dockerignore`, README, `seed-websites --if-empty`), poussé sur `feat/layr-v1`.
+- Coolify : projet `vrvjllghqeihlamqrzcvzpu9` (LayR), base Postgres `gb04pwuixlzrqpzmydnbu2tu` (`layr-db`), app `nrxzo0iicz1dxr9ji272yqbn` (dépôt `PierreWZK/layr`, branche `feat/layr-v1`, Dockerfile, port 3000, domaine https://layr.projectp.fr, volume `/data/media`). Identifiants et mot de passe base dans `scratchpad/layr-coolify.json` (hors dépôt).
+- En ligne : `/fr`, `/en`, `/fr/discover`, `/og/fr.png` en 200 ; `/api/me` renvoie `{"user":null}`. Migrations appliquées, 71 sites insérés au premier démarrage.
+- Pièges rencontrés : (1) healthcheck Coolify sur `curl`, absent de `node:bookworm-slim` → healthcheck désactivé côté Coolify, le `HEALTHCHECK` du Dockerfile reste inopérant pour Coolify ; (2) la base Coolify était `exited:unhealthy` au premier passage, relancée via `POST /databases/{uuid}/start` ; (3) les variables `DATABASE_URL`, `NODE_ENV`, `NEXT_PUBLIC_SITE_URL` apparaissent en double dans la liste (même valeur) : à nettoyer dans l'UI.
+- Non fait, à décider avec l'utilisateur : `GEMINI_API_KEY` et `ADMIN_EMAILS` pas encore définis en production (l'analyse IA est donc désactivée et l'admin est inaccessible). Fusion de la PR #1 puis repasser l'app Coolify sur `master`, comme pour les projets précédents.
+- Non vérifié en ligne : inscription, admin, capture Playwright dans le conteneur, export CSV.
+
 ## 8. Après la V1
 
 Demander à l'utilisateur de faire **tous les tests possibles** (FR/EN, thèmes, mobile, filtres, favoris, comptes, admin, soumission IA avec vraie clé) et de renvoyer la liste complète des modifications à faire.
