@@ -17,6 +17,14 @@ const client = new pg.Client({ connectionString: url });
 await client.connect();
 
 try {
+  // --if-empty (démarrage du conteneur) : ne jamais écraser les modifications faites depuis l'admin
+  if (process.argv.includes('--if-empty')) {
+    const { rows: existing } = await client.query('select count(*)::int as n from websites');
+    if (existing[0].n > 0) {
+      console.log(`catalogue déjà rempli (${existing[0].n} sites), seed ignoré`);
+      process.exit(0);
+    }
+  }
   const { rows } = await client.query('select id, slug from categories');
   const categoryId = new Map(rows.map((r) => [r.slug, r.id]));
   const { rows: badgeRows } = await client.query('select slug from badges');
