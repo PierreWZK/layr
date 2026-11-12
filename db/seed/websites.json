@@ -1,0 +1,1868 @@
+[
+ {
+  "slug": "mobbin",
+  "url": "https://mobbin.com",
+  "title": "Mobbin",
+  "type": "resource",
+  "category": "ux-ui-design",
+  "badges": [
+   "editors-pick",
+   "premium",
+   "best-ux"
+  ],
+  "tags": [
+   "mobile",
+   "patterns",
+   "flows",
+   "screens"
+  ],
+  "rating": 9.2,
+  "featured": true,
+  "fr": "Bibliothèque de captures d'applications mobiles et web réelles, classées par écran, parcours et motif d'interface.",
+  "en": "Library of real mobile and web app screenshots, organised by screen, flow and UI pattern.",
+  "review_fr": "La référence pour voir comment les meilleures apps résolvent un écran précis. La recherche par motif fait gagner des heures ; l'accès complet est payant.",
+  "review_en": "The reference for seeing how the best apps solve a given screen. Searching by pattern saves hours; full access is paid."
+ },
+ {
+  "slug": "laws-of-ux",
+  "url": "https://lawsofux.com",
+  "title": "Laws of UX",
+  "type": "resource",
+  "category": "ux-ui-design",
+  "badges": [
+   "free",
+   "best-ui"
+  ],
+  "tags": [
+   "psychology",
+   "heuristics",
+   "principles"
+  ],
+  "rating": 8.6,
+  "fr": "Recueil des grands principes de psychologie appliqués à l'interface, chacun illustré et sourcé.",
+  "en": "A collection of key psychology principles applied to interfaces, each illustrated and sourced.",
+  "review_fr": "Une porte d'entrée claire vers les heuristiques qu'on cite sans toujours les connaître. Chaque loi tient sur une page soignée, avec ses sources.",
+  "review_en": "A clear way into the heuristics people quote without always knowing them. Each law fits on one carefully designed page, with sources."
+ },
+ {
+  "slug": "page-flows",
+  "url": "https://pageflows.com",
+  "title": "Page Flows",
+  "type": "resource",
+  "category": "ux-ui-design",
+  "badges": [
+   "premium",
+   "best-ux"
+  ],
+  "tags": [
+   "onboarding",
+   "flows",
+   "video",
+   "checkout"
+  ],
+  "rating": 8,
+  "fr": "Parcours utilisateurs enregistrés en vidéo : inscription, onboarding, paiement, résiliation et bien d'autres.",
+  "en": "User journeys recorded on video: sign-up, onboarding, checkout, cancellation and many more.",
+  "review_fr": "Voir un parcours complet en mouvement révèle ce que des captures isolées cachent. Utile avant de concevoir un tunnel critique.",
+  "review_en": "Watching a full journey in motion shows what isolated screenshots hide. Useful before designing a critical funnel."
+ },
+ {
+  "slug": "webflow",
+  "url": "https://webflow.com",
+  "title": "Webflow",
+  "type": "resource",
+  "category": "web-design",
+  "badges": [
+   "premium",
+   "best-ui"
+  ],
+  "tags": [
+   "no-code",
+   "cms",
+   "hosting",
+   "visual development"
+  ],
+  "rating": 8.8,
+  "fr": "Outil de création de sites visuel qui génère un vrai HTML/CSS, avec CMS et hébergement intégrés.",
+  "en": "Visual website builder that produces real HTML/CSS, with built-in CMS and hosting.",
+  "review_fr": "Le compromis le plus abouti entre liberté de design et code propre. La courbe d'apprentissage est réelle, mais elle récompense ceux qui pensent en boîtes CSS.",
+  "review_en": "The most mature balance between design freedom and clean code. The learning curve is real, but it rewards people who think in CSS boxes."
+ },
+ {
+  "slug": "framer",
+  "url": "https://www.framer.com",
+  "title": "Framer",
+  "type": "resource",
+  "category": "web-design",
+  "badges": [
+   "premium",
+   "ai-powered",
+   "interactive",
+   "trending"
+  ],
+  "tags": [
+   "no-code",
+   "animation",
+   "sites",
+   "cms"
+  ],
+  "rating": 9,
+  "featured": true,
+  "fr": "Éditeur de sites qui permet de concevoir, animer et publier sans quitter la toile.",
+  "en": "Website editor for designing, animating and publishing without leaving the canvas.",
+  "review_fr": "La sensation d'un outil de design, le résultat d'un vrai site en ligne. Les animations et les composants interactifs sont son grand point fort.",
+  "review_en": "It feels like a design tool and ships a real live site. Animations and interactive components are its biggest strength."
+ },
+ {
+  "slug": "land-book",
+  "url": "https://land-book.com",
+  "title": "Land-book",
+  "type": "resource",
+  "category": "web-design",
+  "badges": [
+   "free",
+   "inspiration"
+  ],
+  "tags": [
+   "landing pages",
+   "gallery",
+   "templates"
+  ],
+  "rating": 8.1,
+  "fr": "Galerie de pages d'accueil et de sites classés par type, style et secteur.",
+  "en": "Gallery of landing pages and websites sorted by type, style and industry.",
+  "review_fr": "Une galerie dense et bien tenue pour trouver vite une référence de mise en page. Les filtres par secteur sont précieux.",
+  "review_en": "A dense, well-kept gallery for quickly finding a layout reference. The industry filters are valuable."
+ },
+ {
+  "slug": "its-nice-that",
+  "url": "https://www.itsnicethat.com",
+  "title": "It's Nice That",
+  "type": "resource",
+  "category": "graphic-design",
+  "badges": [
+   "free",
+   "inspiration",
+   "editors-pick"
+  ],
+  "tags": [
+   "editorial",
+   "graphic design",
+   "illustration",
+   "culture"
+  ],
+  "rating": 8.5,
+  "fr": "Magazine en ligne consacré au graphisme, à l'illustration et à la création visuelle contemporaine.",
+  "en": "Online magazine about graphic design, illustration and contemporary visual culture.",
+  "review_fr": "Une veille éditoriale exigeante, qui raconte les projets et les gens derrière. Idéal pour sortir de sa bulle.",
+  "review_en": "Demanding editorial coverage that tells the story of projects and the people behind them. Ideal for leaving your bubble."
+ },
+ {
+  "slug": "dribbble",
+  "url": "https://dribbble.com",
+  "title": "Dribbble",
+  "type": "resource",
+  "category": "graphic-design",
+  "badges": [
+   "free",
+   "inspiration"
+  ],
+  "tags": [
+   "shots",
+   "community",
+   "freelance"
+  ],
+  "rating": 7.6,
+  "fr": "Communauté de designers qui partagent des visuels courts et trouvent des missions.",
+  "en": "Designer community sharing short visuals and finding freelance work.",
+  "review_fr": "Idéal pour un détail visuel ou une animation d'icône, moins pour juger une expérience complète.",
+  "review_en": "Great for a visual detail or an icon animation, less so for judging a whole experience."
+ },
+ {
+  "slug": "brand-new",
+  "url": "https://www.underconsideration.com/brandnew/",
+  "title": "Brand New",
+  "type": "resource",
+  "category": "branding",
+  "badges": [
+   "free",
+   "editors-pick"
+  ],
+  "tags": [
+   "identity",
+   "critique",
+   "logos"
+  ],
+  "rating": 8.7,
+  "fr": "Chroniques et critiques des nouvelles identités de marque, avec avant/après détaillés.",
+  "en": "Reviews and critiques of new brand identities, with detailed before and after.",
+  "review_fr": "Depuis des années, la meilleure école du regard sur l'identité visuelle. Les commentaires sont parfois rudes, toujours instructifs.",
+  "review_en": "For years, the best school for learning to judge visual identity. The comments can be harsh, but always instructive."
+ },
+ {
+  "slug": "bpo",
+  "url": "https://bpando.org",
+  "title": "BP&O",
+  "type": "resource",
+  "category": "branding",
+  "badges": [
+   "free",
+   "inspiration"
+  ],
+  "tags": [
+   "packaging",
+   "identity",
+   "editorial"
+  ],
+  "rating": 8.2,
+  "fr": "Blog d'analyse consacré à l'identité, au packaging et à l'édition.",
+  "en": "Analysis blog dedicated to identity, packaging and editorial design.",
+  "review_fr": "Une sélection exigeante et des textes qui expliquent les choix, pas seulement les résultats.",
+  "review_en": "A demanding selection, with writing that explains the choices, not only the results."
+ },
+ {
+  "slug": "google-fonts",
+  "url": "https://fonts.google.com",
+  "title": "Google Fonts",
+  "type": "resource",
+  "category": "typography",
+  "badges": [
+   "free",
+   "open-source"
+  ],
+  "tags": [
+   "webfonts",
+   "variable fonts",
+   "open source"
+  ],
+  "rating": 8.9,
+  "fr": "Catalogue de polices libres, prêtes pour le web, avec de nombreuses fontes variables.",
+  "en": "Catalogue of open-source fonts ready for the web, with many variable fonts.",
+  "review_fr": "Le socle typographique gratuit du web. La qualité a beaucoup progressé et les fontes variables changent la donne.",
+  "review_en": "The free typographic foundation of the web. Quality has improved a lot and variable fonts change the game."
+ },
+ {
+  "slug": "fontshare",
+  "url": "https://www.fontshare.com",
+  "title": "Fontshare",
+  "type": "resource",
+  "category": "typography",
+  "badges": [
+   "free",
+   "free-resource",
+   "editors-pick"
+  ],
+  "tags": [
+   "fonts",
+   "foundry",
+   "free for commercial use"
+  ],
+  "rating": 8.8,
+  "fr": "Polices professionnelles gratuites, y compris pour un usage commercial, éditées par Indian Type Foundry.",
+  "en": "Professional fonts, free including for commercial use, published by Indian Type Foundry.",
+  "review_fr": "Des familles de qualité fonderie, gratuites, avec des grotesques très actuelles. Un réflexe à avoir avant d'acheter une licence.",
+  "review_en": "Foundry-quality families, free, with very current grotesques. Worth checking before buying a licence."
+ },
+ {
+  "slug": "typewolf",
+  "url": "https://www.typewolf.com",
+  "title": "Typewolf",
+  "type": "resource",
+  "category": "typography",
+  "badges": [
+   "free",
+   "inspiration"
+  ],
+  "tags": [
+   "pairings",
+   "recommendations",
+   "sites"
+  ],
+  "rating": 8.3,
+  "fr": "Recommandations de polices, associations et sites repérés pour leur typographie.",
+  "en": "Font recommendations, pairings and websites spotted for their typography.",
+  "review_fr": "Un guide pratique pour choisir et associer des polices, nourri d'exemples réels.",
+  "review_en": "A practical guide to choosing and pairing fonts, backed by real examples."
+ },
+ {
+  "slug": "fonts-in-use",
+  "url": "https://fontsinuse.com",
+  "title": "Fonts In Use",
+  "type": "resource",
+  "category": "typography",
+  "badges": [
+   "free",
+   "inspiration"
+  ],
+  "tags": [
+   "archive",
+   "specimens",
+   "history"
+  ],
+  "rating": 8.4,
+  "fr": "Archive collaborative de la typographie en situation : affiches, livres, identités, sites.",
+  "en": "Collaborative archive of typography in use: posters, books, identities, websites.",
+  "review_fr": "La meilleure façon de voir une police vivre hors de son spécimen. L'archive historique est un trésor.",
+  "review_en": "The best way to see a typeface live outside its specimen. The historical archive is a treasure."
+ },
+ {
+  "slug": "material-design",
+  "url": "https://m3.material.io",
+  "title": "Material Design 3",
+  "type": "resource",
+  "category": "design-systems",
+  "badges": [
+   "free",
+   "open-source",
+   "best-ux"
+  ],
+  "tags": [
+   "google",
+   "components",
+   "tokens",
+   "guidelines"
+  ],
+  "rating": 8.5,
+  "fr": "Système de design de Google : principes, composants, tokens et thèmes dynamiques.",
+  "en": "Google's design system: principles, components, tokens and dynamic theming.",
+  "review_fr": "Une documentation exemplaire, même si on n'adopte pas son esthétique. Les sections sur l'accessibilité et les états sont à lire.",
+  "review_en": "Exemplary documentation, even if you don't adopt its look. The sections on accessibility and states are worth reading."
+ },
+ {
+  "slug": "shadcn-ui",
+  "url": "https://ui.shadcn.com",
+  "title": "shadcn/ui",
+  "type": "resource",
+  "category": "design-systems",
+  "badges": [
+   "free",
+   "open-source",
+   "trending",
+   "editors-pick"
+  ],
+  "tags": [
+   "react",
+   "components",
+   "tailwind",
+   "radix"
+  ],
+  "rating": 9.1,
+  "featured": true,
+  "fr": "Composants React accessibles à copier dans son projet, construits sur Radix et Tailwind.",
+  "en": "Accessible React components you copy into your project, built on Radix and Tailwind.",
+  "review_fr": "Le code vous appartient : c'est toute la différence avec une bibliothèque classique. Une base saine pour un système maison.",
+  "review_en": "You own the code, and that is the whole difference from a classic library. A sound base for an in-house system."
+ },
+ {
+  "slug": "atlassian-design",
+  "url": "https://atlassian.design",
+  "title": "Atlassian Design System",
+  "type": "resource",
+  "category": "design-systems",
+  "badges": [
+   "free"
+  ],
+  "tags": [
+   "tokens",
+   "guidelines",
+   "enterprise"
+  ],
+  "rating": 8,
+  "fr": "Système de design d'Atlassian, avec fondations, tokens, composants et règles de contenu.",
+  "en": "Atlassian's design system, with foundations, tokens, components and content guidelines.",
+  "review_fr": "Un bon exemple de système à grande échelle, très complet sur le ton et la rédaction d'interface.",
+  "review_en": "A good example of a system at scale, very thorough on tone and interface writing."
+ },
+ {
+  "slug": "whimsical",
+  "url": "https://whimsical.com",
+  "title": "Whimsical",
+  "type": "resource",
+  "category": "wireframes",
+  "badges": [
+   "free",
+   "best-ux"
+  ],
+  "tags": [
+   "wireframes",
+   "flowcharts",
+   "collaboration"
+  ],
+  "rating": 8.2,
+  "fr": "Espace de travail visuel pour schémas, maquettes filaires, cartes mentales et documents.",
+  "en": "Visual workspace for flowcharts, wireframes, mind maps and docs.",
+  "review_fr": "Rapide, sobre, sans friction : parfait pour poser une structure avant de passer au design.",
+  "review_en": "Fast, sober, frictionless: perfect for laying out structure before moving to design."
+ },
+ {
+  "slug": "balsamiq",
+  "url": "https://balsamiq.com",
+  "title": "Balsamiq",
+  "type": "resource",
+  "category": "wireframes",
+  "badges": [
+   "premium"
+  ],
+  "tags": [
+   "low fidelity",
+   "sketch",
+   "wireframes"
+  ],
+  "rating": 7.4,
+  "fr": "Outil de maquettes basse fidélité au style dessiné à la main.",
+  "en": "Low-fidelity wireframing tool with a hand-drawn look.",
+  "review_fr": "Son style volontairement brut garde la discussion sur la structure plutôt que sur les couleurs.",
+  "review_en": "Its deliberately rough style keeps discussions on structure rather than colours."
+ },
+ {
+  "slug": "shots",
+  "url": "https://shots.so",
+  "title": "Shots",
+  "type": "resource",
+  "category": "mockups",
+  "badges": [
+   "free",
+   "trending"
+  ],
+  "tags": [
+   "mockups",
+   "devices",
+   "presentation"
+  ],
+  "rating": 8.3,
+  "fr": "Générateur de mises en scène pour présenter des captures dans des appareils et des décors.",
+  "en": "Generator for presenting screenshots inside devices and scenes.",
+  "review_fr": "Des présentations soignées en quelques secondes, directement dans le navigateur.",
+  "review_en": "Polished presentations in seconds, right in the browser."
+ },
+ {
+  "slug": "mockuuups",
+  "url": "https://mockuuups.studio",
+  "title": "Mockuuups Studio",
+  "type": "resource",
+  "category": "mockups",
+  "badges": [
+   "premium",
+   "paid-resource"
+  ],
+  "tags": [
+   "mockups",
+   "scenes",
+   "photography"
+  ],
+  "rating": 7.5,
+  "fr": "Bibliothèque de mockups photographiques réalistes pour mettre en scène écrans et objets.",
+  "en": "Library of realistic photographic mockups to stage screens and objects.",
+  "review_fr": "Un vaste choix de scènes photo crédibles, pratique pour les présentations client.",
+  "review_en": "A wide choice of believable photo scenes, handy for client presentations."
+ },
+ {
+  "slug": "figma",
+  "url": "https://www.figma.com",
+  "title": "Figma",
+  "type": "resource",
+  "category": "prototyping",
+  "badges": [
+   "free",
+   "best-ui",
+   "editors-pick",
+   "ai-powered"
+  ],
+  "tags": [
+   "collaboration",
+   "design",
+   "prototyping",
+   "dev mode"
+  ],
+  "rating": 9.4,
+  "featured": true,
+  "fr": "Outil de design collaboratif dans le navigateur, de l'idée au prototype et au passage aux développeurs.",
+  "en": "Collaborative design tool in the browser, from idea to prototype and developer handoff.",
+  "review_fr": "Le standard du métier, pour de bonnes raisons : la collaboration en temps réel a changé la façon de travailler en équipe.",
+  "review_en": "The industry standard, for good reasons: real-time collaboration changed how teams work."
+ },
+ {
+  "slug": "protopie",
+  "url": "https://www.protopie.io",
+  "title": "ProtoPie",
+  "type": "resource",
+  "category": "prototyping",
+  "badges": [
+   "premium",
+   "interactive"
+  ],
+  "tags": [
+   "high fidelity",
+   "sensors",
+   "interactions"
+  ],
+  "rating": 8.1,
+  "fr": "Prototypage haute fidélité avec logique, variables et capteurs des appareils.",
+  "en": "High-fidelity prototyping with logic, variables and device sensors.",
+  "review_fr": "Quand un prototype doit vraiment se comporter comme le produit, c'est l'outil à prendre.",
+  "review_en": "When a prototype really has to behave like the product, this is the tool."
+ },
+ {
+  "slug": "rive",
+  "url": "https://rive.app",
+  "title": "Rive",
+  "type": "resource",
+  "category": "motion-design",
+  "badges": [
+   "free",
+   "interactive",
+   "trending"
+  ],
+  "tags": [
+   "state machines",
+   "runtime",
+   "animation"
+  ],
+  "rating": 9,
+  "featured": true,
+  "fr": "Outil d'animation interactive avec machines à états, exportée vers des moteurs légers pour le web et les apps.",
+  "en": "Interactive animation tool with state machines, exported to lightweight runtimes for web and apps.",
+  "review_fr": "Il fait passer l'animation d'interface du fichier vidéo au composant vivant. Les machines à états sont son vrai atout.",
+  "review_en": "It turns interface animation from a video file into a living component. State machines are its real asset."
+ },
+ {
+  "slug": "lottiefiles",
+  "url": "https://lottiefiles.com",
+  "title": "LottieFiles",
+  "type": "resource",
+  "category": "motion-design",
+  "badges": [
+   "free",
+   "free-resource"
+  ],
+  "tags": [
+   "lottie",
+   "json",
+   "animations"
+  ],
+  "rating": 8,
+  "fr": "Plateforme et bibliothèque d'animations Lottie, légères et prêtes à intégrer.",
+  "en": "Platform and library of lightweight, ready-to-embed Lottie animations.",
+  "review_fr": "Un catalogue énorme et des outils pratiques pour éditer et tester ses animations.",
+  "review_en": "A huge catalogue and practical tools to edit and test animations."
+ },
+ {
+  "slug": "gsap",
+  "url": "https://gsap.com",
+  "title": "GSAP",
+  "type": "resource",
+  "category": "motion-design",
+  "badges": [
+   "free",
+   "editors-pick"
+  ],
+  "tags": [
+   "javascript",
+   "timeline",
+   "scroll"
+  ],
+  "rating": 9.1,
+  "fr": "Bibliothèque JavaScript d'animation avec timelines, ScrollTrigger et nombreux plugins.",
+  "en": "JavaScript animation library with timelines, ScrollTrigger and many plugins.",
+  "review_fr": "La boîte à outils derrière une grande partie des sites primés. Robuste, rapide et très bien documentée.",
+  "review_en": "The toolkit behind a large share of award-winning sites. Robust, fast and very well documented."
+ },
+ {
+  "slug": "spline",
+  "url": "https://spline.design",
+  "title": "Spline",
+  "type": "resource",
+  "category": "3d-design",
+  "badges": [
+   "free",
+   "interactive",
+   "ai-powered"
+  ],
+  "tags": [
+   "3d",
+   "web",
+   "collaboration"
+  ],
+  "rating": 8.7,
+  "fr": "Outil 3D collaboratif dans le navigateur pour créer des scènes interactives intégrables au web.",
+  "en": "Collaborative 3D tool in the browser for building interactive scenes you can embed on the web.",
+  "review_fr": "La 3D rendue accessible aux designers d'interface, sans passer par un logiciel lourd.",
+  "review_en": "3D made approachable for interface designers, without heavyweight software."
+ },
+ {
+  "slug": "three-js",
+  "url": "https://threejs.org",
+  "title": "Three.js",
+  "type": "resource",
+  "category": "3d-design",
+  "badges": [
+   "free",
+   "open-source",
+   "editors-pick"
+  ],
+  "tags": [
+   "webgl",
+   "javascript",
+   "3d",
+   "library"
+  ],
+  "rating": 9.2,
+  "fr": "Bibliothèque JavaScript libre qui rend la 3D accessible dans le navigateur, avec une immense galerie d'exemples.",
+  "en": "Open-source JavaScript library that brings 3D to the browser, with a huge gallery of examples.",
+  "review_fr": "La fondation de la plupart des expériences 3D du web. La page d'accueil est déjà une vitrine de ce qu'elle permet.",
+  "review_en": "The foundation of most 3D experiences on the web. Its home page is already a showcase of what it enables."
+ },
+ {
+  "slug": "poly-haven",
+  "url": "https://polyhaven.com",
+  "title": "Poly Haven",
+  "type": "resource",
+  "category": "3d-design",
+  "badges": [
+   "free",
+   "free-resource"
+  ],
+  "tags": [
+   "hdri",
+   "textures",
+   "models",
+   "cc0"
+  ],
+  "rating": 8.9,
+  "fr": "HDRI, textures et modèles 3D de qualité, entièrement gratuits et dans le domaine public (CC0).",
+  "en": "Quality HDRIs, textures and 3D models, completely free and in the public domain (CC0).",
+  "review_fr": "Des ressources impeccables, sans compte ni condition. Indispensable pour éclairer une scène.",
+  "review_en": "Spotless assets, no account and no strings attached. Essential for lighting a scene."
+ },
+ {
+  "slug": "undraw",
+  "url": "https://undraw.co",
+  "title": "unDraw",
+  "type": "resource",
+  "category": "illustrations",
+  "badges": [
+   "free",
+   "free-resource"
+  ],
+  "tags": [
+   "svg",
+   "illustrations",
+   "custom colour"
+  ],
+  "rating": 8.2,
+  "fr": "Illustrations SVG gratuites dont on choisit la couleur principale avant de télécharger.",
+  "en": "Free SVG illustrations whose main colour you choose before downloading.",
+  "review_fr": "Simple et efficace pour un état vide ou une page d'aide, à condition de ne pas en abuser.",
+  "review_en": "Simple and effective for an empty state or a help page, as long as you don't overuse it."
+ },
+ {
+  "slug": "open-peeps",
+  "url": "https://www.openpeeps.com",
+  "title": "Open Peeps",
+  "type": "resource",
+  "category": "illustrations",
+  "badges": [
+   "free",
+   "free-resource",
+   "open-source"
+  ],
+  "tags": [
+   "illustrations",
+   "characters",
+   "cc0",
+   "hand drawn"
+  ],
+  "rating": 7.9,
+  "fr": "Bibliothèque de personnages dessinés à la main à combiner librement, dans le domaine public (CC0).",
+  "en": "Library of hand-drawn characters to combine freely, in the public domain (CC0).",
+  "review_fr": "Un style dessiné chaleureux et un système modulaire qui permet des centaines de variations.",
+  "review_en": "A warm hand-drawn style and a modular system that allows hundreds of variations."
+ },
+ {
+  "slug": "lucide",
+  "url": "https://lucide.dev",
+  "title": "Lucide",
+  "type": "resource",
+  "category": "icons",
+  "badges": [
+   "free",
+   "open-source",
+   "editors-pick"
+  ],
+  "tags": [
+   "svg",
+   "react",
+   "stroke icons"
+  ],
+  "rating": 9,
+  "fr": "Jeu d'icônes libre au trait, cohérent et disponible pour tous les frameworks.",
+  "en": "Consistent open-source stroke icon set, available for every framework.",
+  "review_fr": "Le choix par défaut d'aujourd'hui : cohérent, complet, facile à intégrer.",
+  "review_en": "Today's default choice: consistent, complete, easy to integrate."
+ },
+ {
+  "slug": "phosphor-icons",
+  "url": "https://phosphoricons.com",
+  "title": "Phosphor Icons",
+  "type": "resource",
+  "category": "icons",
+  "badges": [
+   "free",
+   "open-source"
+  ],
+  "tags": [
+   "icon family",
+   "weights",
+   "svg"
+  ],
+  "rating": 8.8,
+  "fr": "Famille d'icônes flexible déclinée en six graisses, du fin au plein.",
+  "en": "Flexible icon family in six weights, from thin to fill.",
+  "review_fr": "Les six graisses permettent d'accorder les icônes à la typographie : un vrai plus pour la finition.",
+  "review_en": "Six weights let icons match the typography, a real plus for polish."
+ },
+ {
+  "slug": "heroicons",
+  "url": "https://heroicons.com",
+  "title": "Heroicons",
+  "type": "resource",
+  "category": "icons",
+  "badges": [
+   "free",
+   "open-source"
+  ],
+  "tags": [
+   "tailwind",
+   "svg",
+   "ui icons"
+  ],
+  "rating": 8.3,
+  "fr": "Icônes SVG dessinées par l'équipe de Tailwind CSS, en contour et en plein.",
+  "en": "SVG icons drawn by the Tailwind CSS team, in outline and solid.",
+  "review_fr": "Un set compact et très propre, parfait pour les interfaces produit.",
+  "review_en": "A compact, very clean set, perfect for product interfaces."
+ },
+ {
+  "slug": "v0",
+  "url": "https://v0.app",
+  "title": "v0",
+  "type": "resource",
+  "category": "ai-tools",
+  "badges": [
+   "ai-powered",
+   "trending"
+  ],
+  "tags": [
+   "generative ui",
+   "react",
+   "prototyping"
+  ],
+  "rating": 8.4,
+  "fr": "Assistant IA de Vercel qui génère des interfaces React à partir d'une description ou d'une image.",
+  "en": "Vercel's AI assistant that generates React interfaces from a description or an image.",
+  "review_fr": "Très rapide pour un premier jet ou un prototype. Le résultat demande encore un vrai regard de designer.",
+  "review_en": "Very fast for a first draft or a prototype. The output still needs a real designer's eye."
+ },
+ {
+  "slug": "relume",
+  "url": "https://www.relume.io",
+  "title": "Relume",
+  "type": "resource",
+  "category": "ai-tools",
+  "badges": [
+   "ai-powered",
+   "premium"
+  ],
+  "tags": [
+   "sitemap",
+   "wireframes",
+   "webflow",
+   "figma"
+  ],
+  "rating": 8.2,
+  "fr": "Génère arborescences et maquettes filaires de sites par IA, exportables vers Figma et Webflow.",
+  "en": "AI-generated sitemaps and wireframes for websites, exportable to Figma and Webflow.",
+  "review_fr": "Accélère nettement la phase de structure d'un site vitrine, avec une grande bibliothèque de sections.",
+  "review_en": "Clearly speeds up the structure phase of a marketing site, with a large section library."
+ },
+ {
+  "slug": "khroma",
+  "url": "https://www.khroma.co",
+  "title": "Khroma",
+  "type": "resource",
+  "category": "ai-tools",
+  "badges": [
+   "ai-powered",
+   "free"
+  ],
+  "tags": [
+   "colour",
+   "palettes",
+   "machine learning"
+  ],
+  "rating": 7.6,
+  "fr": "Générateur de couleurs qui apprend vos goûts pour proposer palettes et associations.",
+  "en": "Colour generator that learns your taste to suggest palettes and pairings.",
+  "review_fr": "Une approche ludique de la couleur, utile pour sortir de ses habitudes.",
+  "review_en": "A playful approach to colour, useful for breaking habits."
+ },
+ {
+  "slug": "tailwind-css",
+  "url": "https://tailwindcss.com",
+  "title": "Tailwind CSS",
+  "type": "resource",
+  "category": "developer-tools",
+  "badges": [
+   "free",
+   "open-source"
+  ],
+  "tags": [
+   "css",
+   "utility-first",
+   "framework"
+  ],
+  "rating": 9,
+  "fr": "Framework CSS utilitaire pour construire des interfaces directement dans le balisage.",
+  "en": "Utility-first CSS framework for building interfaces right in your markup.",
+  "review_fr": "Il impose un système d'espacements et de couleurs cohérent, et rapproche design et code.",
+  "review_en": "It enforces a consistent spacing and colour system, and brings design and code closer."
+ },
+ {
+  "slug": "can-i-use",
+  "url": "https://caniuse.com",
+  "title": "Can I use",
+  "type": "resource",
+  "category": "developer-tools",
+  "badges": [
+   "free"
+  ],
+  "tags": [
+   "browser support",
+   "css",
+   "compatibility"
+  ],
+  "rating": 8.6,
+  "fr": "Tables de compatibilité des fonctionnalités web selon les navigateurs.",
+  "en": "Browser support tables for web platform features.",
+  "review_fr": "La réponse immédiate à « est-ce que je peux utiliser ça en production ? ».",
+  "review_en": "The instant answer to \"can I ship this in production?\"."
+ },
+ {
+  "slug": "motion",
+  "url": "https://motion.dev",
+  "title": "Motion",
+  "type": "resource",
+  "category": "developer-tools",
+  "badges": [
+   "free",
+   "open-source"
+  ],
+  "tags": [
+   "animation library",
+   "react",
+   "javascript"
+  ],
+  "rating": 8.8,
+  "fr": "Bibliothèque d'animation pour React et JavaScript, anciennement Framer Motion.",
+  "en": "Animation library for React and JavaScript, formerly Framer Motion.",
+  "review_fr": "Des animations déclaratives, des ressorts naturels et des transitions de mise en page qui fonctionnent.",
+  "review_en": "Declarative animations, natural springs and layout transitions that just work."
+ },
+ {
+  "slug": "coolors",
+  "url": "https://coolors.co",
+  "title": "Coolors",
+  "type": "resource",
+  "category": "creative-resources",
+  "badges": [
+   "free",
+   "free-resource"
+  ],
+  "tags": [
+   "palettes",
+   "colour",
+   "generator"
+  ],
+  "rating": 8.4,
+  "fr": "Générateur de palettes de couleurs rapide, avec contrôle du contraste et export.",
+  "en": "Fast colour palette generator, with contrast checks and export.",
+  "review_fr": "La barre d'espace la plus utile du web pour trouver une palette en quelques secondes.",
+  "review_en": "The most useful space bar on the web for finding a palette in seconds."
+ },
+ {
+  "slug": "haikei",
+  "url": "https://haikei.app",
+  "title": "Haikei",
+  "type": "resource",
+  "category": "creative-resources",
+  "badges": [
+   "free",
+   "free-resource"
+  ],
+  "tags": [
+   "svg",
+   "backgrounds",
+   "generator",
+   "shapes"
+  ],
+  "rating": 8.1,
+  "fr": "Générateur de formes et de fonds SVG : vagues, blobs, dégradés, motifs, exportables en un clic.",
+  "en": "Generator for SVG shapes and backgrounds: waves, blobs, gradients and patterns, exportable in one click.",
+  "review_fr": "Pratique pour produire vite un fond original et léger, à doser avec retenue.",
+  "review_en": "Handy for quickly producing an original, lightweight background, to be used with restraint."
+ },
+ {
+  "slug": "godly",
+  "url": "https://godly.website",
+  "title": "Godly",
+  "type": "resource",
+  "category": "creative-resources",
+  "badges": [
+   "free",
+   "inspiration",
+   "trending"
+  ],
+  "tags": [
+   "gallery",
+   "animated",
+   "web design"
+  ],
+  "rating": 8.6,
+  "fr": "Galerie de sites web remarquables présentés en vidéo, pour capter leur mouvement.",
+  "en": "Gallery of remarkable websites shown as video to capture their motion.",
+  "review_fr": "La vidéo change tout : on juge enfin les sites sur leurs animations, pas sur une capture figée.",
+  "review_en": "Video changes everything: sites are finally judged on their motion, not a frozen screenshot."
+ },
+ {
+  "slug": "bruno-simon",
+  "url": "https://bruno-simon.com",
+  "title": "Bruno Simon",
+  "type": "inspiration",
+  "category": "3d-design",
+  "inspiration": "portfolios",
+  "creator": "Bruno Simon",
+  "badges": [
+   "editors-pick",
+   "interactive",
+   "inspiration"
+  ],
+  "tags": [
+   "3d",
+   "game",
+   "webgl"
+  ],
+  "visual_tags": [
+   "developer portfolio",
+   "3D",
+   "playful"
+  ],
+  "style": "Playful 3D",
+  "palette": "Warm",
+  "layout": "Fullscreen",
+  "animation": "WebGL",
+  "industry": "Personal",
+  "rating": 9.4,
+  "featured": true,
+  "fr": "Portfolio de développeur creative coding où l'on pilote une petite voiture dans un monde en 3D.",
+  "en": "Creative developer portfolio where you drive a small car through a 3D world.",
+  "review_fr": "Une idée simple poussée jusqu'au bout : le portfolio devient un jeu. Une référence durable de la 3D sur le web.",
+  "review_en": "A simple idea taken all the way: the portfolio becomes a game. A lasting reference for 3D on the web."
+ },
+ {
+  "slug": "lynn-fisher",
+  "url": "https://lynnandtonic.com",
+  "title": "Lynn Fisher",
+  "type": "inspiration",
+  "category": "web-design",
+  "inspiration": "personal-websites",
+  "creator": "Lynn Fisher",
+  "badges": [
+   "interactive",
+   "inspiration",
+   "best-ui"
+  ],
+  "tags": [
+   "responsive",
+   "illustrated",
+   "playful"
+  ],
+  "visual_tags": [
+   "designer portfolio",
+   "illustration",
+   "responsive play"
+  ],
+  "style": "Playful",
+  "palette": "Vibrant",
+  "layout": "Asymmetric",
+  "animation": "Micro-interactions",
+  "industry": "Personal",
+  "rating": 9,
+  "fr": "Site personnel d'une designer et développeuse, entièrement repensé chaque année.",
+  "en": "Personal site of a designer and developer, fully redesigned every year.",
+  "review_fr": "Redimensionnez la fenêtre : la mise en page joue avec vous. Un rappel joyeux que le responsive peut être un terrain créatif.",
+  "review_en": "Resize the window and the layout plays along. A joyful reminder that responsive design can be creative ground."
+ },
+ {
+  "slug": "robin-noguier",
+  "url": "https://robin-noguier.com",
+  "title": "Robin Noguier",
+  "type": "inspiration",
+  "category": "web-design",
+  "inspiration": "portfolios",
+  "creator": "Robin Noguier",
+  "badges": [
+   "interactive",
+   "inspiration"
+  ],
+  "tags": [
+   "webgl",
+   "transitions",
+   "portfolio"
+  ],
+  "visual_tags": [
+   "designer portfolio",
+   "WebGL",
+   "immersive"
+  ],
+  "style": "Immersive",
+  "palette": "Dark",
+  "layout": "Fullscreen",
+  "animation": "WebGL",
+  "industry": "Design",
+  "rating": 8.6,
+  "fr": "Portfolio de designer interactif aux transitions fluides entre les projets.",
+  "en": "Interactive designer portfolio with fluid transitions between projects.",
+  "review_fr": "Des transitions WebGL au service de la navigation, jamais gratuites.",
+  "review_en": "WebGL transitions that serve navigation, never gratuitous."
+ },
+ {
+  "slug": "dennis-snellenberg",
+  "url": "https://dennissnellenberg.com",
+  "title": "Dennis Snellenberg",
+  "type": "inspiration",
+  "category": "web-design",
+  "inspiration": "portfolios",
+  "creator": "Dennis Snellenberg",
+  "badges": [
+   "interactive",
+   "inspiration",
+   "best-ui"
+  ],
+  "tags": [
+   "freelance",
+   "magnetic buttons",
+   "smooth scroll"
+  ],
+  "visual_tags": [
+   "designer portfolio",
+   "monochrome",
+   "motion"
+  ],
+  "style": "Bold minimal",
+  "palette": "Monochrome",
+  "layout": "Asymmetric",
+  "animation": "Micro-interactions",
+  "industry": "Design",
+  "rating": 8.7,
+  "fr": "Portfolio de designer et développeur freelance, sobre et très animé.",
+  "en": "Freelance designer and developer portfolio, sober and highly animated.",
+  "review_fr": "Un cas d'école des micro-interactions : boutons magnétiques, défilement doux, rythme maîtrisé.",
+  "review_en": "A textbook case of micro-interactions: magnetic buttons, smooth scrolling, controlled pacing."
+ },
+ {
+  "slug": "rauno",
+  "url": "https://rauno.me",
+  "title": "Rauno Freiberg",
+  "type": "inspiration",
+  "category": "ux-ui-design",
+  "inspiration": "portfolios",
+  "creator": "Rauno Freiberg",
+  "badges": [
+   "inspiration",
+   "best-ui"
+  ],
+  "tags": [
+   "design engineering",
+   "craft",
+   "details"
+  ],
+  "visual_tags": [
+   "design engineer portfolio",
+   "minimal",
+   "craft"
+  ],
+  "style": "Minimal",
+  "palette": "Neutral",
+  "layout": "Single column",
+  "animation": "Micro-interactions",
+  "industry": "Technology",
+  "rating": 8.8,
+  "fr": "Site d'un design engineer, rempli d'expériences d'interface et de détails soignés.",
+  "en": "Site of a design engineer, full of interface experiments and careful details.",
+  "review_fr": "Chaque détail est une petite leçon d'interaction. Le sobre poussé au niveau de l'artisanat.",
+  "review_en": "Every detail is a small lesson in interaction. Restraint pushed to the level of craft."
+ },
+ {
+  "slug": "paco-coursey",
+  "url": "https://paco.me",
+  "title": "Paco Coursey",
+  "type": "inspiration",
+  "category": "web-design",
+  "inspiration": "minimalist",
+  "creator": "Paco Coursey",
+  "badges": [
+   "inspiration"
+  ],
+  "tags": [
+   "minimal",
+   "personal",
+   "typography"
+  ],
+  "visual_tags": [
+   "developer portfolio",
+   "minimal",
+   "text first"
+  ],
+  "style": "Minimal",
+  "palette": "Monochrome",
+  "layout": "Single column",
+  "animation": "Subtle",
+  "industry": "Technology",
+  "rating": 8.3,
+  "fr": "Site personnel d'un ingénieur design, réduit à l'essentiel.",
+  "en": "Personal site of a design engineer, reduced to the essentials.",
+  "review_fr": "La preuve qu'un site presque uniquement textuel peut avoir une vraie présence.",
+  "review_en": "Proof that an almost text-only site can have real presence."
+ },
+ {
+  "slug": "brittany-chiang",
+  "url": "https://brittanychiang.com",
+  "title": "Brittany Chiang",
+  "type": "inspiration",
+  "category": "developer-tools",
+  "inspiration": "portfolios",
+  "creator": "Brittany Chiang",
+  "badges": [
+   "inspiration",
+   "best-ux"
+  ],
+  "tags": [
+   "developer",
+   "portfolio",
+   "clean"
+  ],
+  "visual_tags": [
+   "developer portfolio",
+   "dark",
+   "two columns"
+  ],
+  "style": "Clean",
+  "palette": "Dark",
+  "layout": "Two columns",
+  "animation": "Subtle",
+  "industry": "Technology",
+  "rating": 8.5,
+  "fr": "Portfolio de développeuse front-end, clair et efficace, largement cité comme modèle.",
+  "en": "Front-end developer portfolio, clear and efficient, widely cited as a model.",
+  "review_fr": "Une structure limpide : qui, quoi, preuves. Le portfolio développeur bien fait.",
+  "review_en": "A crystal-clear structure: who, what, proof. The developer portfolio done right."
+ },
+ {
+  "slug": "josh-comeau",
+  "url": "https://www.joshwcomeau.com",
+  "title": "Josh W. Comeau",
+  "type": "inspiration",
+  "category": "developer-tools",
+  "inspiration": "personal-websites",
+  "creator": "Josh W. Comeau",
+  "badges": [
+   "interactive",
+   "inspiration"
+  ],
+  "tags": [
+   "blog",
+   "tutorials",
+   "interactive"
+  ],
+  "visual_tags": [
+   "personal blog",
+   "whimsy",
+   "interactive demos"
+  ],
+  "style": "Playful",
+  "palette": "Vibrant",
+  "layout": "Single column",
+  "animation": "Micro-interactions",
+  "industry": "Education",
+  "rating": 8.9,
+  "fr": "Blog d'un développeur qui explique CSS et React avec des démonstrations interactives.",
+  "en": "A developer's blog explaining CSS and React through interactive demos.",
+  "review_fr": "Pédagogie et fantaisie réunies : chaque article contient des démos qu'on manipule.",
+  "review_en": "Teaching and whimsy together: every article has demos you can play with."
+ },
+ {
+  "slug": "locomotive",
+  "url": "https://locomotive.ca",
+  "title": "Locomotive",
+  "type": "inspiration",
+  "category": "web-design",
+  "inspiration": "agency-websites",
+  "creator": "Locomotive",
+  "badges": [
+   "inspiration",
+   "interactive"
+  ],
+  "tags": [
+   "agency",
+   "smooth scroll",
+   "montreal"
+  ],
+  "visual_tags": [
+   "agency",
+   "scroll",
+   "bold type"
+  ],
+  "style": "Bold",
+  "palette": "Monochrome",
+  "layout": "Asymmetric",
+  "animation": "Scroll-driven",
+  "industry": "Design",
+  "rating": 8.8,
+  "fr": "Agence numérique de Montréal, connue pour ses sites au défilement travaillé.",
+  "en": "Montreal digital agency known for finely crafted scrolling sites.",
+  "review_fr": "Les créateurs de Locomotive Scroll montrent ici leur savoir-faire de mise en mouvement.",
+  "review_en": "The makers of Locomotive Scroll show their motion craft here."
+ },
+ {
+  "slug": "active-theory",
+  "url": "https://activetheory.net",
+  "title": "Active Theory",
+  "type": "inspiration",
+  "category": "3d-design",
+  "inspiration": "creative-studios",
+  "creator": "Active Theory",
+  "badges": [
+   "interactive",
+   "inspiration",
+   "editors-pick"
+  ],
+  "tags": [
+   "webgl",
+   "immersive",
+   "studio"
+  ],
+  "visual_tags": [
+   "studio",
+   "WebGL",
+   "immersive"
+  ],
+  "style": "Immersive",
+  "palette": "Dark",
+  "layout": "Fullscreen",
+  "animation": "WebGL",
+  "industry": "Technology",
+  "rating": 9.1,
+  "fr": "Studio créatif spécialisé dans les expériences web immersives et en temps réel.",
+  "en": "Creative studio specialising in immersive, real-time web experiences.",
+  "review_fr": "Le site du studio est lui-même une démonstration technique. La 3D temps réel à son meilleur.",
+  "review_en": "The studio's site is itself a technical showcase. Real-time 3D at its best."
+ },
+ {
+  "slug": "lusion",
+  "url": "https://lusion.co",
+  "title": "Lusion",
+  "type": "inspiration",
+  "category": "3d-design",
+  "inspiration": "3d-experiences",
+  "creator": "Lusion",
+  "badges": [
+   "editors-pick",
+   "interactive",
+   "inspiration"
+  ],
+  "tags": [
+   "webgl",
+   "3d",
+   "studio"
+  ],
+  "visual_tags": [
+   "studio",
+   "3D",
+   "physics"
+  ],
+  "style": "Immersive 3D",
+  "palette": "Vibrant",
+  "layout": "Fullscreen",
+  "animation": "WebGL",
+  "industry": "Design",
+  "rating": 9.2,
+  "featured": true,
+  "fr": "Studio de création numérique dont le site déploie une 3D interactive et physique.",
+  "en": "Digital production studio whose site unfolds interactive, physics-driven 3D.",
+  "review_fr": "Une maîtrise rare de la 3D interactive, avec une direction artistique joyeuse et précise.",
+  "review_en": "Rare mastery of interactive 3D, with joyful and precise art direction."
+ },
+ {
+  "slug": "pentagram",
+  "url": "https://www.pentagram.com",
+  "title": "Pentagram",
+  "type": "inspiration",
+  "category": "branding",
+  "inspiration": "agency-websites",
+  "creator": "Pentagram",
+  "badges": [
+   "inspiration"
+  ],
+  "tags": [
+   "design agency",
+   "case studies",
+   "editorial"
+  ],
+  "visual_tags": [
+   "agency",
+   "editorial grid",
+   "portfolio"
+  ],
+  "style": "Editorial",
+  "palette": "Neutral",
+  "layout": "Grid",
+  "animation": "Subtle",
+  "industry": "Design",
+  "rating": 8.4,
+  "fr": "Site de l'agence de design indépendante Pentagram et de ses projets.",
+  "en": "Site of the independent design agency Pentagram and its work.",
+  "review_fr": "Une grille éditoriale qui laisse toute la place au travail. La retenue comme signature.",
+  "review_en": "An editorial grid that gives the work all the space. Restraint as a signature."
+ },
+ {
+  "slug": "basement-studio",
+  "url": "https://basement.studio",
+  "title": "basement.studio",
+  "type": "inspiration",
+  "category": "web-design",
+  "inspiration": "creative-studios",
+  "creator": "basement.studio",
+  "badges": [
+   "inspiration",
+   "interactive"
+  ],
+  "tags": [
+   "studio",
+   "dark",
+   "bold"
+  ],
+  "visual_tags": [
+   "studio",
+   "dark",
+   "experimental"
+  ],
+  "style": "Bold",
+  "palette": "Dark",
+  "layout": "Grid",
+  "animation": "WebGL",
+  "industry": "Technology",
+  "rating": 8.7,
+  "fr": "Studio de design et de développement au site sombre, technique et plein de caractère.",
+  "en": "Design and development studio with a dark, technical site full of character.",
+  "review_fr": "Une identité affirmée et un sens du détail qui se voient dès la première seconde.",
+  "review_en": "A strong identity and an eye for detail visible from the very first second."
+ },
+ {
+  "slug": "obys",
+  "url": "https://obys.agency",
+  "title": "Obys",
+  "type": "inspiration",
+  "category": "web-design",
+  "inspiration": "award-winning",
+  "creator": "Obys Agency",
+  "badges": [
+   "inspiration",
+   "interactive",
+   "editors-pick"
+  ],
+  "tags": [
+   "agency",
+   "awards",
+   "typography"
+  ],
+  "visual_tags": [
+   "agency",
+   "award-winning",
+   "typographic"
+  ],
+  "style": "Editorial",
+  "palette": "Monochrome",
+  "layout": "Asymmetric",
+  "animation": "Scroll-driven",
+  "industry": "Design",
+  "rating": 8.6,
+  "fr": "Agence créative régulièrement récompensée pour ses sites typographiques et animés.",
+  "en": "Creative agency regularly awarded for typographic, animated websites.",
+  "review_fr": "Un usage très graphique de la typographie et des transitions, sans jamais perdre la lisibilité.",
+  "review_en": "A very graphic use of type and transitions that never loses legibility."
+ },
+ {
+  "slug": "14islands",
+  "url": "https://14islands.com",
+  "title": "14islands",
+  "type": "inspiration",
+  "category": "web-design",
+  "inspiration": "agency-websites",
+  "creator": "14islands",
+  "badges": [
+   "inspiration"
+  ],
+  "tags": [
+   "agency",
+   "stockholm",
+   "digital products"
+  ],
+  "visual_tags": [
+   "agency",
+   "colourful",
+   "playful"
+  ],
+  "style": "Playful",
+  "palette": "Vibrant",
+  "layout": "Grid",
+  "animation": "Scroll-driven",
+  "industry": "Design",
+  "rating": 8.3,
+  "fr": "Studio créatif de Stockholm qui conçoit sites et produits numériques.",
+  "en": "Stockholm creative studio designing websites and digital products.",
+  "review_fr": "Couleurs franches et animations au défilement : une vitrine vivante et accueillante.",
+  "review_en": "Bold colours and scroll animations: a lively, welcoming showcase."
+ },
+ {
+  "slug": "cuberto",
+  "url": "https://cuberto.com",
+  "title": "Cuberto",
+  "type": "inspiration",
+  "category": "motion-design",
+  "inspiration": "motion",
+  "creator": "Cuberto",
+  "badges": [
+   "interactive",
+   "inspiration"
+  ],
+  "tags": [
+   "agency",
+   "cursor",
+   "motion"
+  ],
+  "visual_tags": [
+   "agency",
+   "motion",
+   "custom cursor"
+  ],
+  "style": "Bold",
+  "palette": "Monochrome",
+  "layout": "Asymmetric",
+  "animation": "Micro-interactions",
+  "industry": "Design",
+  "rating": 8.6,
+  "fr": "Agence de design reconnue pour ses curseurs, transitions et interactions animées.",
+  "en": "Design agency known for its cursors, transitions and animated interactions.",
+  "review_fr": "Une référence du motion d'interface : chaque survol est pensé.",
+  "review_en": "A reference in interface motion: every hover is considered."
+ },
+ {
+  "slug": "linear",
+  "url": "https://linear.app",
+  "title": "Linear",
+  "type": "inspiration",
+  "category": "ux-ui-design",
+  "inspiration": "landing-pages",
+  "creator": "Linear",
+  "badges": [
+   "editors-pick",
+   "best-ui",
+   "inspiration"
+  ],
+  "tags": [
+   "saas",
+   "product",
+   "dark"
+  ],
+  "visual_tags": [
+   "landing page",
+   "dark",
+   "precise"
+  ],
+  "style": "Precise",
+  "palette": "Dark",
+  "layout": "Grid",
+  "animation": "Subtle",
+  "industry": "Technology",
+  "rating": 9.3,
+  "featured": true,
+  "fr": "Page produit de l'outil de gestion de projet Linear, sombre, nette et précise.",
+  "en": "Product page of the Linear project management tool: dark, sharp and precise.",
+  "review_fr": "Elle a défini une esthétique imitée partout. La précision des détails reste difficile à égaler.",
+  "review_en": "It defined an aesthetic copied everywhere. The precision of its details remains hard to match."
+ },
+ {
+  "slug": "stripe",
+  "url": "https://stripe.com",
+  "title": "Stripe",
+  "type": "inspiration",
+  "category": "web-design",
+  "inspiration": "landing-pages",
+  "creator": "Stripe",
+  "badges": [
+   "best-ui",
+   "inspiration"
+  ],
+  "tags": [
+   "fintech",
+   "gradient",
+   "product"
+  ],
+  "visual_tags": [
+   "landing page",
+   "gradient",
+   "illustrated product"
+  ],
+  "style": "Polished",
+  "palette": "Vibrant",
+  "layout": "Grid",
+  "animation": "Subtle",
+  "industry": "Fintech",
+  "rating": 9,
+  "fr": "Site de la plateforme de paiement Stripe, réputé pour sa clarté et ses visuels produit.",
+  "en": "Site of the Stripe payments platform, known for its clarity and product visuals.",
+  "review_fr": "Un modèle pour expliquer un produit technique sans perdre l'élégance.",
+  "review_en": "A model for explaining a technical product without losing elegance."
+ },
+ {
+  "slug": "raycast",
+  "url": "https://www.raycast.com",
+  "title": "Raycast",
+  "type": "inspiration",
+  "category": "developer-tools",
+  "inspiration": "landing-pages",
+  "creator": "Raycast",
+  "badges": [
+   "inspiration",
+   "best-ui"
+  ],
+  "tags": [
+   "productivity",
+   "macos",
+   "dark"
+  ],
+  "visual_tags": [
+   "landing page",
+   "dark",
+   "glow"
+  ],
+  "style": "Polished",
+  "palette": "Dark",
+  "layout": "Grid",
+  "animation": "Subtle",
+  "industry": "Technology",
+  "rating": 8.7,
+  "fr": "Page du lanceur d'applications Raycast, sombre et lumineuse à la fois.",
+  "en": "Page of the Raycast launcher, dark and luminous at once.",
+  "review_fr": "Des visuels produit très soignés et une page qui donne envie d'essayer immédiatement.",
+  "review_en": "Carefully crafted product visuals and a page that makes you want to try it right away."
+ },
+ {
+  "slug": "vercel",
+  "url": "https://vercel.com",
+  "title": "Vercel",
+  "type": "inspiration",
+  "category": "developer-tools",
+  "inspiration": "landing-pages",
+  "creator": "Vercel",
+  "badges": [
+   "inspiration"
+  ],
+  "tags": [
+   "developer",
+   "platform",
+   "minimal"
+  ],
+  "visual_tags": [
+   "landing page",
+   "monochrome",
+   "geometric"
+  ],
+  "style": "Minimal",
+  "palette": "Monochrome",
+  "layout": "Grid",
+  "animation": "Subtle",
+  "industry": "Technology",
+  "rating": 8.5,
+  "fr": "Site de la plateforme de déploiement Vercel, géométrique et monochrome.",
+  "en": "Site of the Vercel deployment platform, geometric and monochrome.",
+  "review_fr": "Le noir et blanc et la grille rigoureuse en font une référence de sobriété technique.",
+  "review_en": "Black and white and a rigorous grid make it a reference of technical restraint."
+ },
+ {
+  "slug": "aesop",
+  "url": "https://www.aesop.com",
+  "title": "Aesop",
+  "type": "inspiration",
+  "category": "branding",
+  "inspiration": "ecommerce",
+  "creator": "Aesop",
+  "badges": [
+   "inspiration",
+   "best-ux"
+  ],
+  "tags": [
+   "skincare",
+   "retail",
+   "editorial"
+  ],
+  "visual_tags": [
+   "e-commerce",
+   "warm",
+   "editorial"
+  ],
+  "style": "Editorial",
+  "palette": "Warm",
+  "layout": "Grid",
+  "animation": "Subtle",
+  "industry": "Beauty",
+  "rating": 8.8,
+  "fr": "Boutique en ligne de la marque de soins Aesop, à l'ambiance éditoriale et chaleureuse.",
+  "en": "Online shop of the Aesop skincare brand, with a warm editorial feel.",
+  "review_fr": "Le e-commerce traité comme un magazine : tons chauds, typographie raffinée, rythme calme.",
+  "review_en": "E-commerce treated like a magazine: warm tones, refined type, calm pacing."
+ },
+ {
+  "slug": "teenage-engineering",
+  "url": "https://teenage.engineering",
+  "title": "Teenage Engineering",
+  "type": "inspiration",
+  "category": "graphic-design",
+  "inspiration": "ecommerce",
+  "creator": "Teenage Engineering",
+  "badges": [
+   "inspiration",
+   "editors-pick"
+  ],
+  "tags": [
+   "hardware",
+   "music",
+   "product"
+  ],
+  "visual_tags": [
+   "e-commerce",
+   "minimal",
+   "product photography"
+  ],
+  "style": "Minimal",
+  "palette": "Neutral",
+  "layout": "Grid",
+  "animation": "Subtle",
+  "industry": "Music",
+  "rating": 8.9,
+  "fr": "Site du fabricant suédois d'instruments et d'objets électroniques au design reconnaissable.",
+  "en": "Site of the Swedish maker of instruments and electronic objects with a recognisable design.",
+  "review_fr": "Un catalogue aussi précis et ludique que les produits eux-mêmes.",
+  "review_en": "A catalogue as precise and playful as the products themselves."
+ },
+ {
+  "slug": "neal-fun",
+  "url": "https://neal.fun",
+  "title": "Neal.fun",
+  "type": "inspiration",
+  "category": "web-design",
+  "inspiration": "experimental",
+  "creator": "Neal Agarwal",
+  "badges": [
+   "interactive",
+   "inspiration",
+   "editors-pick"
+  ],
+  "tags": [
+   "games",
+   "experiments",
+   "curiosity"
+  ],
+  "visual_tags": [
+   "experimental",
+   "playful",
+   "toys"
+  ],
+  "style": "Playful",
+  "palette": "Vibrant",
+  "layout": "Grid",
+  "animation": "Micro-interactions",
+  "industry": "Culture",
+  "rating": 9,
+  "fr": "Collection de jeux et d'expériences web curieuses et pédagogiques.",
+  "en": "Collection of curious, educational web games and experiments.",
+  "review_fr": "Le web comme terrain de jeu : chaque projet transforme une idée simple en expérience mémorable.",
+  "review_en": "The web as a playground: each project turns a simple idea into a memorable experience."
+ },
+ {
+  "slug": "the-pudding",
+  "url": "https://pudding.cool",
+  "title": "The Pudding",
+  "type": "inspiration",
+  "category": "graphic-design",
+  "inspiration": "storytelling",
+  "creator": "The Pudding",
+  "badges": [
+   "interactive",
+   "inspiration",
+   "editors-pick"
+  ],
+  "tags": [
+   "data journalism",
+   "essays",
+   "visualisation"
+  ],
+  "visual_tags": [
+   "storytelling",
+   "data visualisation",
+   "scrollytelling"
+  ],
+  "style": "Editorial",
+  "palette": "Vibrant",
+  "layout": "Scroll story",
+  "animation": "Scroll-driven",
+  "industry": "Media",
+  "rating": 9.1,
+  "fr": "Publication d'essais visuels qui racontent des sujets culturels avec des données.",
+  "en": "Publication of visual essays that explain cultural topics with data.",
+  "review_fr": "Le récit par le défilement à son meilleur : chaque sujet invente sa propre forme.",
+  "review_en": "Scroll-driven storytelling at its best: every topic invents its own form."
+ },
+ {
+  "slug": "patatap",
+  "url": "https://patatap.com",
+  "title": "Patatap",
+  "type": "inspiration",
+  "category": "motion-design",
+  "inspiration": "interactive",
+  "creator": "Jono Brandel",
+  "badges": [
+   "interactive",
+   "inspiration"
+  ],
+  "tags": [
+   "sound",
+   "keyboard",
+   "animation"
+  ],
+  "visual_tags": [
+   "interactive",
+   "audiovisual",
+   "colourful"
+  ],
+  "style": "Playful",
+  "palette": "Vibrant",
+  "layout": "Fullscreen",
+  "animation": "Micro-interactions",
+  "industry": "Music",
+  "rating": 8.2,
+  "fr": "Instrument visuel et sonore : chaque touche du clavier déclenche un son et une animation.",
+  "en": "Visual and sound instrument: each keyboard key triggers a sound and an animation.",
+  "review_fr": "Un classique de l'interaction pure, toujours aussi immédiat.",
+  "review_en": "A classic of pure interaction, still just as immediate."
+ },
+ {
+  "slug": "klim",
+  "url": "https://klim.co.nz",
+  "title": "Klim Type Foundry",
+  "type": "inspiration",
+  "category": "typography",
+  "inspiration": "typography",
+  "creator": "Kris Sowersby",
+  "badges": [
+   "inspiration",
+   "editors-pick"
+  ],
+  "tags": [
+   "type foundry",
+   "specimens",
+   "essays"
+  ],
+  "visual_tags": [
+   "typography",
+   "specimens",
+   "editorial"
+  ],
+  "style": "Editorial",
+  "palette": "Neutral",
+  "layout": "Grid",
+  "animation": "None",
+  "industry": "Design",
+  "rating": 8.9,
+  "fr": "Fonderie typographique néo-zélandaise, avec spécimens et essais sur ses caractères.",
+  "en": "New Zealand type foundry, with specimens and essays about its typefaces.",
+  "review_fr": "Des spécimens exemplaires et des textes qui racontent la naissance de chaque famille.",
+  "review_en": "Exemplary specimens and writing that tells the story of each family."
+ },
+ {
+  "slug": "pangram-pangram",
+  "url": "https://pangrampangram.com",
+  "title": "Pangram Pangram",
+  "type": "inspiration",
+  "category": "typography",
+  "inspiration": "typography",
+  "creator": "Pangram Pangram Foundry",
+  "badges": [
+   "inspiration",
+   "free-resource"
+  ],
+  "tags": [
+   "type foundry",
+   "trial fonts",
+   "specimens"
+  ],
+  "visual_tags": [
+   "typography",
+   "bold",
+   "colourful specimens"
+  ],
+  "style": "Bold",
+  "palette": "Vibrant",
+  "layout": "Grid",
+  "animation": "Subtle",
+  "industry": "Design",
+  "rating": 8.4,
+  "fr": "Fonderie indépendante aux spécimens colorés, avec versions d'essai gratuites.",
+  "en": "Independent foundry with colourful specimens and free trial versions.",
+  "review_fr": "Des spécimens qui donnent envie d'essayer, et des polices très demandées.",
+  "review_en": "Specimens that make you want to try, and highly sought-after typefaces."
+ },
+ {
+  "slug": "are-na",
+  "url": "https://www.are.na",
+  "title": "Are.na",
+  "type": "inspiration",
+  "category": "creative-resources",
+  "inspiration": "minimalist",
+  "creator": "Are.na",
+  "badges": [
+   "inspiration",
+   "free"
+  ],
+  "tags": [
+   "research",
+   "collections",
+   "community"
+  ],
+  "visual_tags": [
+   "minimal",
+   "research tool",
+   "grid"
+  ],
+  "style": "Minimal",
+  "palette": "Neutral",
+  "layout": "Grid",
+  "animation": "None",
+  "industry": "Culture",
+  "rating": 8.6,
+  "fr": "Plateforme pour rassembler des idées en collections, sans publicité ni algorithme.",
+  "en": "Platform for gathering ideas into collections, without ads or algorithms.",
+  "review_fr": "Un outil de recherche plus qu'un réseau social. Sa sobriété est un choix éditorial.",
+  "review_en": "A research tool more than a social network. Its restraint is an editorial choice."
+ }
+]
