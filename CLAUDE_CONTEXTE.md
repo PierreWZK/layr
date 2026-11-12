@@ -97,12 +97,31 @@ Pas d'esthétique « IA générique » (pas de glassmorphism, dégradés répét
 - Pages `favorites`, `inspiration`, `account`, `contact` remplacent les pages « Bientôt disponible ».
 - Libellés `inspirationPage`, `favoritesPage`, `account`, `contact`, `newsletter` ajoutés aux deux dictionnaires.
 
+### En-tête et héro « cadre » (commit `713293a`)
+- Demande : refaire l'en-tête et le héro d'après une référence Dribbble (cadre sombre, panneau coloré arrondi, CTA en encoches).
+- Fait : barre charbon dans les deux thèmes, panneau moka/ambre, encoches concaves (Soumettre, Explorer, Défiler), trois vraies captures en parallaxe.
+
+### Étape 4 — Admin & soumission IA
+- Table `submissions` (migration 005), espace admin `/[locale]/admin` : tableau de bord, sites (créer, modifier, supprimer, publier), soumissions, messages, newsletter (export CSV), taxonomie.
+- Ajout d'un site : URL → capture Playwright (WebP 1200×750 dans `MEDIA_DIR`, servie par `/media/[file]`) + analyse Gemini (`responseSchema`, sortie nettoyée) → formulaire modifiable → enregistrement. Sans `GEMINI_API_KEY`, l'écran le dit et le formulaire manuel reste utilisable. Garde SSRF (`normalizePublicUrl`).
+- Page publique `/[locale]/submit` : propose une URL, stockée en base, traitée depuis l'admin.
+- Admin = `role = 'admin'` ou e-mail listé dans `ADMIN_EMAILS`.
+
+### Logo, partage social et refonte du contenu
+- Demande : un logo dans l'en-tête et un aperçu pour le partage du lien sur les réseaux.
+- Fait : marque à trois calques (champagne, ambre, moka), dans l'en-tête, le favicon `app/icon.svg` et le pied de page. Images `public/og/fr.png` et `en.png` (1200×630), balises Open Graph et Twitter `summary_large_image`.
+- Demande : revoir tout le contenu (cartes, police…) en cohérence avec le héro, sans toucher au héro ni à l'en-tête.
+- Fait : titres en capitales serrées, cartes arrondies 22 px (`.card`), boutons en pilules champagne, champs et puces arrondis, `.panel-mocha`, fiche site mise à jour.
+- Validé par l'utilisateur le 2026-11-12, puis commit et ouverture du dépôt GitHub `PierreWZK/layr` (branche principale `master`, PR depuis `feat/layr-v1`).
+
 ## 5. Ce qui a été testé
 
 - Étape 3, API (38 vérifications, toutes OK) : inscription (mot de passe court, e-mail invalide, doublon 409), connexion (mauvais mot de passe 401), `/api/me`, ajout/retrait de favori, fusion par sync (slug invalide ignoré, pas de doublon), collections (site ajouté une seule fois, retrait, suppression, collection d'un autre compte ou inconnue sans effet), batch de fiches dans l'ordre demandé, déconnexion, favoris sans session (401), newsletter et contact (validation et doublon), 12 pages en 200 (filtres invalides compris).
 - Étape 3, navigateur Playwright (17 vérifications, toutes OK) : filtre d'inspiration qui change l'URL et le nombre de fiches (28 → 5), effacer tout, filtre palette par URL, inscription avec bienvenue, favori visible sur la page Favoris et synchronisé côté serveur, création de collection, récemment consultés, contact envoyé, newsletter enregistrée, déconnexion, pas de débordement à 375 px sur les 4 nouvelles pages, aucune erreur console.
 - Étape 3, build : `tsc --noEmit`, `eslint .`, `next build` OK (nouvelles routes API en `ƒ`).
 - Bugs trouvés et corrigés pendant les tests : `event.currentTarget` lu après `await` (formulaires contact et newsletter affichaient une erreur alors que l'envoi réussissait) ; tags en double (« dark » présent dans tags et visualTags) ; clé React dupliquée sur les infos de fiche.
+- Étape 4 + refonte, build : `tsc --noEmit`, `eslint .`, `next build` OK après correction de `/api/me`. Captures Playwright (découvrir, accueil EN, fiche sombre, inspiration 375 px, catégories sombre) : pas de débordement, aucune erreur console.
+- Étape 4 non testée : parcours admin complet, analyse avec une vraie clé Gemini, upload de capture, export CSV.
 
 ## 6. Ce qui n'a pas marché / reste en suspens
 
@@ -155,6 +174,9 @@ Pas d'esthétique « IA générique » (pas de glassmorphism, dégradés répét
 - Les tags d'une fiche et ses tags visuels peuvent se répéter (« dark ») : toujours dédoublonner avant d'afficher.
 - Les routes qui lisent les cookies (`currentUser`, `sessionToken`) ne doivent pas être appelées depuis le layout : les comptes passent par `GET /api/me` depuis le navigateur.
 - Le cookie de session est posé dans une route handler (`setSessionCookie`), jamais dans un Server Component.
+- Route handler qui lit les cookies dans un `try/catch` : appeler `await connection()` avant le `try`, sinon le build échoue (« During prerendering, `cookies()` rejects »).
+- `readFile(path.join(MEDIA_DIR, …))` déclenche un avertissement de traçage Turbopack : ajouter `/*turbopackIgnore: true*/`.
+- La base Postgres embarquée (port 5433) peut s'arrêter : le serveur de dev se fige sans erreur claire. Relancer `npm run db:start`.
 
 ## 8. Après la V1
 

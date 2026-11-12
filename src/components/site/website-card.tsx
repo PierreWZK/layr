@@ -24,7 +24,7 @@ export function WebsiteCard({
   if (view === "list") {
     return (
       <article className="group grid grid-cols-[96px_minmax(0,1fr)] items-center gap-4 border-b border-line py-4 sm:grid-cols-[160px_minmax(0,1fr)_auto] sm:gap-6">
-        <Link href={href} aria-label={fmt(t.card.open, { title: site.title })} className="block overflow-hidden border border-line">
+        <Link href={href} aria-label={fmt(t.card.open, { title: site.title })} className="block overflow-hidden rounded-2xl border border-line">
           <Screenshot
             src={site.screenshot}
             alt=""
@@ -65,7 +65,7 @@ export function WebsiteCard({
               rel="noopener noreferrer"
               aria-label={visitLabel}
               title={visitLabel}
-              className="grid h-9 w-9 place-items-center border border-line-strong transition-colors hover:border-accent hover:text-accent"
+              className="grid h-9 w-9 place-items-center rounded-full border border-line-strong transition-colors hover:border-accent hover:text-accent"
             >
               ↗
             </a>
@@ -81,12 +81,12 @@ export function WebsiteCard({
         {/* Calque décalé qui apparaît au survol : signature visuelle de LayR */}
         <span
           aria-hidden
-          className="absolute inset-0 border border-accent opacity-0 transition-[transform,opacity] duration-500 ease-out-expo group-hover:translate-x-2 group-hover:translate-y-2 group-hover:opacity-100 motion-reduce:transition-none"
+          className="absolute inset-0 rounded-[22px] border border-accent opacity-0 transition-[transform,opacity] duration-500 ease-out-expo group-hover:translate-x-2 group-hover:translate-y-2 group-hover:opacity-100 motion-reduce:transition-none"
         />
         <Link
           href={href}
           aria-label={fmt(t.card.open, { title: site.title })}
-          className="relative block overflow-hidden border border-line bg-surface transition-[border-color,transform] duration-500 ease-out-expo group-hover:-translate-y-1 group-hover:border-line-strong motion-reduce:transform-none"
+          className="relative block overflow-hidden rounded-[22px] border border-line bg-surface transition-[border-color,transform] duration-500 ease-out-expo group-hover:-translate-y-1 group-hover:border-line-strong motion-reduce:transform-none"
         >
           <Screenshot
             src={site.screenshot}

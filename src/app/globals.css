@@ -60,6 +60,12 @@
 }
 
 @layer base {
+  /* Champs et listes : arrondis doux, comme les CTA */
+  input:not([type=checkbox]):not([type=radio]):not([type=range]):not([type=color]),
+  select,
+  textarea {
+    border-radius: 14px;
+  }
   html {
     background: var(--bg);
     color: var(--fg);
@@ -91,15 +97,31 @@
   }
   .t-h1 {
     font-size: clamp(2.5rem, 6.2vw, 5.75rem);
-    line-height: 0.95;
-    letter-spacing: -0.045em;
+    line-height: 0.9;
+    letter-spacing: -0.05em;
     font-weight: 600;
+    text-transform: uppercase;
   }
   .t-h2 {
     font-size: clamp(1.875rem, 3.8vw, 3.25rem);
-    line-height: 1.02;
-    letter-spacing: -0.035em;
+    line-height: 0.95;
+    letter-spacing: -0.045em;
     font-weight: 600;
+    text-transform: uppercase;
+  }
+  /* Carte : même rayon et même bordure que le cadre du héro */
+  .card {
+    border-radius: 22px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+  }
+  /* Panneau moka dégradé (signature du héro), pour les blocs de mise en avant */
+  .panel-mocha {
+    border-radius: 26px;
+    color: #f6f1e7;
+    background:
+      radial-gradient(55% 75% at 80% 70%, rgb(200 121 44 / 0.9) 0%, rgb(200 121 44 / 0.3) 45%, transparent 75%),
+      linear-gradient(140deg, #6a523a 0%, #5b4632 45%, #3b2d20 100%);
   }
   .t-lead {
     font-size: clamp(1.0625rem, 1.5vw, 1.25rem);

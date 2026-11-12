@@ -9,6 +9,7 @@ import { useI18n } from "@/components/i18n/locale-provider";
 import { SearchCommand } from "@/components/search/search-command";
 import { ThemeToggle } from "@/components/theme/theme-toggle";
 import { ArrowCircle } from "@/components/ui/arrow-circle";
+import { Wordmark } from "./logo";
 
 // En-tête « cadre » : barre charbon dans les deux thèmes (classe .dark = jetons sombres pour les contrôles)
 export function SiteHeader() {
@@ -31,11 +32,9 @@ export function SiteHeader() {
   return (
     <header className={`dark sticky top-0 z-40 bg-charcoal text-fg ${isHome ? "" : "border-b border-line"}`}>
       <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between gap-4 px-4 md:px-7">
-        <Link href={`/${locale}`} aria-label={t.actions.home} className="group flex items-center gap-2.5">
-          <span className="rounded-lg bg-champagne px-2 py-1 text-[15px] font-semibold leading-none tracking-[-0.03em] text-charcoal transition-colors duration-300 group-hover:bg-amber">
-            LayR
-          </span>
-          <span className="hidden text-[14px] font-medium tracking-[-0.01em] sm:inline">{t.nav.tagline}</span>
+        <Link href={`/${locale}`} aria-label={t.actions.home} className="group flex items-center">
+          <Wordmark size={28} className="text-fg transition-opacity duration-300 group-hover:opacity-80" />
+          <span className="ml-3 hidden border-l border-line pl-3 text-[13px] text-muted sm:inline">{t.nav.tagline}</span>
         </Link>
 
         <nav aria-label="Main" className="hidden items-center gap-7 lg:flex">

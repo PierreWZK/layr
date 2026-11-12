@@ -41,7 +41,7 @@ export function FavoriteButton({
       title={label}
       className={
         variant === "overlay"
-          ? `grid h-9 w-9 place-items-center border transition-colors duration-300 ${
+          ? `grid h-9 w-9 place-items-center rounded-full border transition-colors duration-300 ${
               saved
                 ? "border-accent bg-accent text-accent-fg"
                 : "border-line-strong bg-bg/90 text-fg hover:border-accent hover:text-accent"

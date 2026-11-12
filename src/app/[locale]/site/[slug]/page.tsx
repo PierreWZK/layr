@@ -73,7 +73,7 @@ async function SiteDetail({ params }: PageProps) {
             href={`/go/${site.slug}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-12 items-center bg-accent px-5 text-[15px] font-medium text-accent-fg transition-colors duration-300 hover:bg-fg hover:text-bg"
+            className="inline-flex h-12 items-center rounded-full bg-champagne px-6 text-[15px] font-medium text-charcoal ring-1 ring-inset ring-charcoal/15 transition-colors duration-300 hover:bg-amber"
           >
             {t.site.visit}
           </a>
@@ -84,7 +84,7 @@ async function SiteDetail({ params }: PageProps) {
       {/* Capture en grand, posée sur un calque décalé */}
       <Reveal className="relative mt-10 md:mt-14">
         <span aria-hidden className="absolute inset-0 translate-x-3 translate-y-3 border border-accent md:translate-x-5 md:translate-y-5" />
-        <div className="relative overflow-hidden border border-line-strong bg-surface">
+        <div className="relative overflow-hidden rounded-[22px] border border-line-strong bg-surface">
           <Screenshot
             src={site.screenshot}
             alt={site.title}
@@ -108,7 +108,7 @@ async function SiteDetail({ params }: PageProps) {
               <p className="t-label mb-3 text-muted">{t.site.category}</p>
               <Link
                 href={`/${locale}/discover?cat=${site.category.slug}`}
-                className="inline-flex border border-line-strong px-3 py-1.5 text-[14px] hover:border-accent hover:text-accent"
+                className="inline-flex rounded-full border border-line-strong px-3.5 py-1.5 text-[14px] hover:border-accent hover:text-accent"
               >
                 {site.category.name}
               </Link>
@@ -122,7 +122,7 @@ async function SiteDetail({ params }: PageProps) {
                   <Link
                     key={badge.slug}
                     href={`/${locale}/discover?badge=${badge.slug}`}
-                    className="inline-flex items-center gap-2 border border-line px-2.5 py-1.5 text-[12px] hover:border-line-strong"
+                    className="inline-flex items-center gap-2 rounded-full border border-line px-3 py-1.5 text-[12px] hover:border-line-strong"
                   >
                     <span aria-hidden className="h-1.5 w-1.5" style={{ backgroundColor: badge.color }} />
                     {badge.name}

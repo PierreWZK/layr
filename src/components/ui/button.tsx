@@ -5,19 +5,19 @@ export type ButtonVariant = "primary" | "secondary" | "ghost";
 export type ButtonSize = "sm" | "md" | "lg";
 
 const base =
-  "group inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium " +
+  "group inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-medium " +
   "transition-[background-color,color,border-color] duration-300 ease-out-expo " +
   "disabled:pointer-events-none disabled:opacity-50";
 
 const variants: Record<ButtonVariant, string> = {
-  primary: "bg-accent text-accent-fg hover:bg-fg hover:text-bg",
-  secondary: "border border-line-strong text-fg hover:bg-fg hover:text-bg",
+  primary: "bg-champagne text-charcoal ring-1 ring-inset ring-charcoal/15 hover:bg-amber hover:text-charcoal",
+  secondary: "border border-line-strong text-fg hover:border-fg",
   ghost: "text-fg hover:text-accent",
 };
 
 const sizes: Record<ButtonSize, string> = {
-  sm: "h-9 px-3.5 text-sm",
-  md: "h-12 px-5 text-[15px]",
+  sm: "h-9 px-4 text-sm",
+  md: "h-12 px-6 text-[15px]",
   lg: "h-14 px-7 text-base",
 };
 

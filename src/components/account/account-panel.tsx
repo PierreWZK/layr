@@ -36,6 +36,11 @@ export function AccountPanel() {
           <Link href={`/${locale}/favorites`} className="inline-flex h-12 items-center bg-accent px-5 font-medium text-accent-fg hover:bg-fg hover:text-bg">
             {t.account.goFavorites} ↗
           </Link>
+          {user.role === "admin" && (
+            <Link href={`/${locale}/admin`} className="inline-flex h-12 items-center border border-accent px-5 font-medium text-accent hover:bg-accent hover:text-accent-fg">
+              {t.admin.title} ↗
+            </Link>
+          )}
           <button
             type="button"
             onClick={() => signOut()}

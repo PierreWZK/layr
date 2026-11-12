@@ -43,3 +43,6 @@ next-env.d.ts
 # base locale embarquée
 .pgdata/
 *.log
+
+# Captures créées par l admin
+data/

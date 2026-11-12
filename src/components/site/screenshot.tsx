@@ -34,6 +34,7 @@ export function Screenshot({
       height={750}
       sizes={sizes}
       priority={priority}
+      unoptimized={src.startsWith("/media/")}
       className={`aspect-[16/10] w-full object-cover object-top ${className ?? ""}`}
     />
   );

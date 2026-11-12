@@ -24,7 +24,7 @@ export function Badge({
 
 // Surface : bloc neutre, bordure fine, sans arrondi
 export function Surface({ className, ...props }: ComponentProps<"div">) {
-  return <div {...props} className={`border border-line bg-surface ${className ?? ""}`} />;
+  return <div {...props} className={`card ${className ?? ""}`} />;
 }
 
 // Champ : ligne de base, style éditorial

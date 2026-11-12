@@ -19,11 +19,28 @@ export async function generateMetadata({
   const { locale } = await params;
   if (!isLocale(locale)) return {};
   const t = getDictionary(locale);
+  const image = { url: `/og/${locale}.png`, width: 1200, height: 630, alt: "LayR" };
   return {
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://layr.projectp.fr"),
     title: { default: "LayR", template: `%s — LayR` },
     description: t.meta.description,
     alternates: {
       languages: { fr: "/fr", en: "/en" },
+    },
+    openGraph: {
+      title: t.meta.title,
+      description: t.meta.description,
+      siteName: "LayR",
+      type: "website",
+      locale: locale === "fr" ? "fr_FR" : "en_US",
+      url: `/${locale}`,
+      images: [image],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t.meta.title,
+      description: t.meta.description,
+      images: [image.url],
     },
   };
 }
