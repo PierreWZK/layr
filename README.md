@@ -6,7 +6,11 @@
 
 Projet du **jour 29** du défi **30 jours, 30 projets** (Next.js, TypeScript, Postgres, Gemini, Playwright).
 
-![Aperçu de LayR : le héro « Le bon design n'est jamais un hasard. »](public/og/fr.png)
+[![Page d'accueil de LayR](docs/preview-accueil.png)](https://layr.projectp.fr/)
+
+<p align="center">
+  <img src="docs/preview-mobile.png" alt="LayR sur téléphone" width="260">
+</p>
 
 ## Fonctionnalités
 
@@ -57,3 +61,13 @@ Le `Dockerfile` construit l'application avec Chromium (pour les captures de l'ad
 ## Stack
 
 Next.js 16 (App Router, Cache Components) · TypeScript · Tailwind CSS 4 · Framer Motion · PostgreSQL (`pg`, migrations SQL) · Gemini (API REST) · Playwright + sharp · Docker sur Coolify.
+
+---
+
+## Le défi 30 jours, 30 projets
+
+Un projet complet par jour pendant 30 jours, chacun en ligne sur son propre sous-domaine.
+
+- 🗂️ **Tous les projets** : [projectp.fr](https://projectp.fr/)
+- 💻 **Le dépôt du défi** : [github.com/PierreWZK/30DaysProjects](https://github.com/PierreWZK/30DaysProjects)
+- ⬅️ **Jour précédent** : [Iron Legacy, combat 3D](https://iron.projectp.fr/)
